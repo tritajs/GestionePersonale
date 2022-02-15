@@ -1,0 +1,413 @@
+object fmmodspec: Tfmmodspec
+  Left = 477
+  Height = 483
+  Top = 230
+  Width = 1073
+  Caption = 'fmmodspec'
+  ClientHeight = 483
+  ClientWidth = 1073
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 33
+    Top = 0
+    Width = 1073
+    Align = alTop
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    ClientHeight = 33
+    ClientWidth = 1073
+    TabOrder = 0
+    object Image1: TImage
+      Left = 2
+      Height = 29
+      Top = 2
+      Width = 1069
+      Align = alClient
+      Picture.Data = {
+        07544269746D617046050000424D460500000000000036000000280000001000
+        00001B0000000100180000000000100500000000000000000000000000000000
+        0000A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77
+        A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A7B27DA7B27DA7B27DA7B27DA7B2
+        7DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7
+        B27DAFB983AFB983AFB983AFB983AFB983AFB983AFB983AFB983AFB983AFB983
+        AFB983AFB983AFB983AFB983AFB983AFB983B4BE88B4BE88B4BE88B4BE88B4BE
+        88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4
+        BE88BAC48EBAC48EBAC48EBAC48EBAC48EBAC48EBAC48EBAC48EBAC48EBAC48E
+        BAC48EBAC48EBAC48EBAC48EBAC48EBAC48EC0CA94C0CA94C0CA94C0CA94C0CA
+        94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0
+        CA94C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99
+        C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99CAD49ECAD49ECAD49ECAD49ECAD4
+        9ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECA
+        D49ECDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6
+        CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6D1D9ADD1D9ADD1D9ADD1D9ADD1D9
+        ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1
+        D9ADD5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4
+        D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D8DFBBD8DFBBD8DFBBD8DFBBD8DF
+        BBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8
+        DFBBDBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0
+        DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0E3E8D0E3E8D0E3E8D0E3E8D0E3E8
+        D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3
+        E8D0EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCE7EBD6E7EBD6E7EBD6E7EBD6E7EB
+        D6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7
+        EBD6E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9
+        E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9EAEDDBEAEDDBEAEDDBEAEDDBEAED
+        DBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEA
+        EDDBEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEE
+        DCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEA
+        EEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEE
+        DCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEA
+        EEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEE
+        DCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEA
+        EEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEE
+        DCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEA
+        EEDCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      }
+      Stretch = True
+    end
+    object WTNav: TWTNavigator
+      Left = 528
+      Height = 18
+      Top = 6
+      Width = 385
+      Align = alNone
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      AutoSize = True
+      Caption = 'WTNav'
+      EdgeBorders = []
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Transparent = True
+      OnClick = WTNavClick
+      EditCompNew = ecSpec
+      VisibleButtons = [nbtFirst, nbtPrior, nbtNext, nbtLast, nbtInsert, nbtEdit, nbtPost, nbtCancel, nbtRefresh, nbtFind]
+      OnBeforeClick = WTNavBeforeClick
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 163
+    Top = 33
+    Width = 1073
+    Align = alTop
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    ClientHeight = 163
+    ClientWidth = 1073
+    Color = 14805247
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Verdana'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 24
+      Height = 16
+      Top = 21
+      Width = 128
+      Caption = 'SPECIALIZZAZIONE'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object SPECIALIZZAZIONE: TumEdit
+      Left = 24
+      Height = 24
+      Top = 45
+      Width = 720
+      CharCase = ecUppercase
+      OnKeyPress = SPECIALIZZAZIONEKeyPress
+      ReadOnly = True
+      TabOrder = 0
+      TypeFind = 'CONTAINING'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16777092
+    end
+    object Label2: TLabel
+      Left = 24
+      Height = 16
+      Top = 85
+      Width = 73
+      Caption = 'Cod. Spec.'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object codspec: TumEdit
+      Left = 110
+      Height = 24
+      Top = 79
+      Width = 80
+      CharCase = ecUppercase
+      OnKeyPress = SPECIALIZZAZIONEKeyPress
+      ReadOnly = True
+      TabOrder = 1
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label3: TLabel
+      Left = 207
+      Height = 16
+      Top = 85
+      Width = 92
+      Caption = 'Area Impiego:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object areaimpiego: TumEdit
+      Left = 308
+      Height = 24
+      Top = 80
+      Width = 436
+      CharCase = ecUppercase
+      OnKeyPress = SPECIALIZZAZIONEKeyPress
+      ReadOnly = True
+      TabOrder = 2
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label4: TLabel
+      Left = 24
+      Height = 16
+      Top = 120
+      Width = 61
+      Caption = 'SPEQUAB'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object SPEQUAB: TumEdit
+      Left = 110
+      Height = 24
+      Top = 116
+      Width = 199
+      CharCase = ecUppercase
+      OnKeyPress = SPECIALIZZAZIONEKeyPress
+      ReadOnly = True
+      TabOrder = 3
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object IDSPEC: TumEdit
+      Left = 776
+      Height = 24
+      Top = 64
+      Width = 80
+      ReadOnly = True
+      TabOrder = 4
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 36
+    Top = 196
+    Width = 1073
+    Align = alTop
+    BevelInner = bvRaised
+    BorderWidth = 1
+    BorderStyle = bsSingle
+    Caption = 'Panel3'
+    ClientHeight = 32
+    ClientWidth = 1069
+    TabOrder = 2
+    object Image2: TImage
+      Cursor = crHandPoint
+      Left = 3
+      Height = 26
+      Top = 3
+      Width = 1063
+      AntialiasingMode = amOn
+      Align = alClient
+      Center = True
+      Picture.Data = {
+        07544269746D617046050000424D460500000000000036000000280000001000
+        00001B0000000100180000000000100500000000000000000000000000000000
+        0000A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77
+        A2AC77A2AC77A2AC77A2AC77A2AC77A2AC77A7B27DA7B27DA7B27DA7B27DA7B2
+        7DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7B27DA7
+        B27DAFB983AFB983AFB983AFB983AFB983AFB983AFB983AFB983AFB983AFB983
+        AFB983AFB983AFB983AFB983AFB983AFB983B4BE88B4BE88B4BE88B4BE88B4BE
+        88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4BE88B4
+        BE88BAC48EBAC48EBAC48EBAC48EBAC48EBAC48EBAC48EBAC48EBAC48EBAC48E
+        BAC48EBAC48EBAC48EBAC48EBAC48EBAC48EC0CA94C0CA94C0CA94C0CA94C0CA
+        94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0CA94C0
+        CA94C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99
+        C5CF99C5CF99C5CF99C5CF99C5CF99C5CF99CAD49ECAD49ECAD49ECAD49ECAD4
+        9ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECAD49ECA
+        D49ECDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6
+        CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6CDD6A6D1D9ADD1D9ADD1D9ADD1D9ADD1D9
+        ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1D9ADD1
+        D9ADD5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4
+        D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D5DCB4D8DFBBD8DFBBD8DFBBD8DFBBD8DF
+        BBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8DFBBD8
+        DFBBDBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0
+        DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0DBE2C0E3E8D0E3E8D0E3E8D0E3E8D0E3E8
+        D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3E8D0E3
+        E8D0EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCE7EBD6E7EBD6E7EBD6E7EBD6E7EB
+        D6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7EBD6E7
+        EBD6E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9
+        E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9E9ECD9EAEDDBEAEDDBEAEDDBEAEDDBEAED
+        DBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEAEDDBEA
+        EDDBEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEE
+        DCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEA
+        EEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEE
+        DCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEA
+        EEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEE
+        DCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEA
+        EEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDC
+        EAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEE
+        DCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEAEEDCEA
+        EEDCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      }
+      Stretch = True
+    end
+    object Lcontatore: TLabel
+      Left = 894
+      Height = 15
+      Top = 9
+      Width = 9
+      Caption = '...'
+      Font.Color = clBlue
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object DBGrid1: TDBGrid
+    Cursor = crHandPoint
+    Left = 0
+    Height = 251
+    Top = 232
+    Width = 1073
+    Align = alClient
+    AutoEdit = False
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'idspec'
+        Visible = False
+        FieldName = 'idspec'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Color = clRed
+        Title.Font.Height = -13
+        Title.Font.Name = 'Verdana'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'SPECIALIZZAZIONE'
+        Width = 500
+        FieldName = 'SPECIALIZZAZIONE'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Color = clRed
+        Title.Font.Height = -13
+        Title.Font.Name = 'Verdana'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'SPEQUAB'
+        Width = 150
+        FieldName = 'SPEQUAB'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Color = clRed
+        Title.Font.Height = -13
+        Title.Font.Name = 'Verdana'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'CODSPEC'
+        Width = 75
+        FieldName = 'CODSPEC'
+      end    
+      item
+        Title.Font.CharSet = ANSI_CHARSET
+        Title.Font.Color = clRed
+        Title.Font.Height = -13
+        Title.Font.Name = 'Verdana'
+        Title.Font.Pitch = fpVariable
+        Title.Font.Quality = fqDraft
+        Title.Caption = 'AREAIMPIEGO'
+        Width = 200
+        FieldName = 'AREAIMPIEGO'
+      end>
+    DataSource = DSspec
+    TabOrder = 3
+    TabStop = False
+  end
+  object ecSpec: TwtEditCompNew
+    DataSet = DSetSpec
+    Table = 'SPECIALIZZAZIONI'
+    OnBeforeFind = ecSpecBeforeFind
+    OnBeforeUpdate = ecSpecBeforeUpdate
+    OnContatore = ecSpecContatore
+    left = 864
+    top = 56
+  end
+  object DSspec: TDataSource
+    DataSet = DSetSpec
+    left = 976
+    top = 128
+  end
+  object DSetSpec: TUIBDataSet
+    Transaction = DM.TR
+    Database = DM.DB
+    OnClose = etmCommitRetaining
+    AfterScroll = DSetSpecAfterScroll
+    left = 808
+    top = 144
+  end
+end

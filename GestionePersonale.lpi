@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="GestionePersonale"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes Count="3">
+      <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="GestionePersonale"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="GestionePersonale"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item3>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
+    </RunParams>
+    <RequiredPackages Count="8">
+      <Item1>
+        <PackageName Value="FCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="lazreportpdfexport"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="laz_fpspreadsheet"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="trita"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="Edit"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="UIBLaz"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="lazreport"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="LCL"/>
+      </Item8>
+    </RequiredPackages>
+    <Units Count="28">
+      <Unit0>
+        <Filename Value="GestionePersonale.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="main_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="main"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="dm_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DM_f"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="fmautorizzazioni_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmAutorizzazioni"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="fmdatipersonali_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmDatiPersonali"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="fraltreffaa_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="frarma_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrArma"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="frfamiliari_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrFamiliari"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="frgradi_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrGradi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="FrGradi_f"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="fricompense_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="fronorificenze_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrOnorificenze"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="frpatenti_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="frspec_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrSpec"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="frSpec_f"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="frstatogiuridico_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="frtessere_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrTessere"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="frtrasferimenti_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrTrasferimenti"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="frvalutazione_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrValutazione"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="frricercasuschede_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmRicercaSuSchede"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrRicercaSuschede_f"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="fmmodelliword_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmModelliWord"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FmModelliWord_f"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="fmcomunicazioni_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmComunicazioni"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="fmexportexcel_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmExportExcel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="fminsmulval_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fminsmulval"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="fmstampe_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmStampe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FmStampe_f"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="fminscorsi_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmInsCorsi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="fmsituazioneforza_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmSituazioneForza"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="fmcambiautente_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmCambiaUtente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="fmmodspec_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fmmodspec"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="fmnote_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmNote"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit27>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="GestionePersonale"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,8 @@
+/backup
+*.exe
+/manuale
+/pubblica
+/lib
+/temp
+*.dbg
+/archivi

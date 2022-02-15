@@ -1,0 +1,1801 @@
+object FmDatiPersonali: TFmDatiPersonali
+  Left = 129
+  Height = 722
+  Top = 136
+  Width = 1151
+  Caption = 'FmDatiPersonali'
+  ClientHeight = 702
+  ClientWidth = 1151
+  KeyPreview = True
+  Menu = MainMenu
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.8.0'
+  object Pdati: TPanel
+    Left = 0
+    Height = 357
+    Top = 11
+    Width = 1151
+    Align = alTop
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    BorderStyle = bsSingle
+    ClientHeight = 353
+    ClientWidth = 1147
+    Color = 14543103
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 7
+      Height = 15
+      Top = 43
+      Width = 40
+      Caption = 'GRADO'
+      Font.Color = clRed
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 200
+      Height = 15
+      Top = 43
+      Width = 60
+      Caption = 'COGNOME'
+      Font.Color = clRed
+      ParentColor = False
+      ParentFont = False
+    end
+    object cognome: TumEdit
+      Left = 278
+      Height = 24
+      Top = 37
+      Width = 208
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnKeyPress = cognomeKeyPress
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 8
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Nome: TumEdit
+      Left = 543
+      Height = 24
+      Top = 37
+      Width = 190
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnKeyPress = cognomeKeyPress
+      ParentFont = False
+      TabOrder = 9
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label3: TLabel
+      Left = 501
+      Height = 15
+      Top = 43
+      Width = 35
+      Caption = 'NOME'
+      Font.Color = clRed
+      ParentColor = False
+      ParentFont = False
+    end
+    object WTnav: TWTNavigator
+      Left = 813
+      Height = 28
+      Top = 320
+      Width = 309
+      Align = alCustom
+      AutoSize = True
+      ButtonHeight = 28
+      ButtonWidth = 28
+      Caption = 'WTnav'
+      EdgeBorders = []
+      ParentShowHint = False
+      PopupMenu = PMnav
+      ShowHint = True
+      TabOrder = 0
+      Wrapable = False
+      OnClick = WTnavClick
+      EditCompNew = ECdati
+      OnBeforeClick = WTnavBeforeClick
+    end
+    object Label4: TLabel
+      Left = 8
+      Height = 15
+      Top = 14
+      Width = 50
+      Caption = 'Matricola'
+      Font.Color = clBlack
+      ParentColor = False
+      ParentFont = False
+    end
+    object matrmec: TumEdit
+      Left = 71
+      Height = 22
+      Top = 11
+      Width = 98
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label5: TLabel
+      Left = 196
+      Height = 15
+      Top = 14
+      Width = 69
+      Caption = 'Contingente:'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 323
+      Height = 15
+      Top = 14
+      Width = 32
+      Caption = 'Sesso:'
+      ParentColor = False
+    end
+    object ksgrado: TWTComboBoxSql
+      Left = 71
+      Height = 22
+      Top = 39
+      Width = 123
+      Attrib = [AtInsert, AtSay, AtClear, AtMake, AtEnable, AtFind, AtPaste, AtProcedure]
+      Sql.Strings = (
+        'select * from gradi where grado containing :grado'
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'idgradi'
+      LookDisplay = 'grado'
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 7
+    end
+    object Label7: TLabel
+      Left = 406
+      Height = 15
+      Top = 14
+      Width = 34
+      Caption = 'Ruolo:'
+      ParentColor = False
+    end
+    object Label8: TLabel
+      Left = 485
+      Height = 15
+      Top = 14
+      Width = 53
+      Caption = 'Posizione:'
+      ParentColor = False
+    end
+    object ksstatogiuridico: TWTComboBoxSql
+      Left = 543
+      Height = 19
+      Top = 9
+      Width = 299
+      Attrib = [AtInsert, AtSay, AtClear, AtMake, AtEnable, AtFind, AtPaste, AtProcedure]
+      Sql.Strings = (
+        'select * from stato where descrizione containing :descrizione'
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'idstato'
+      LookDisplay = 'descrizione'
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 5
+    end
+    object Label9: TLabel
+      Left = 7
+      Height = 15
+      Top = 71
+      Width = 46
+      Caption = 'Nato/a il'
+      ParentColor = False
+    end
+    object nato: TWDateEdit
+      Cursor = crHandPoint
+      Left = 71
+      Height = 21
+      Top = 67
+      Width = 109
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      ReadOnly = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 12
+      Text = '  /  /    '
+      TypeFind = '='
+    end
+    object Label10: TLabel
+      Left = 186
+      Height = 15
+      Top = 70
+      Width = 88
+      Caption = 'Comune Nascita'
+      ParentColor = False
+    end
+    object Label11: TLabel
+      Left = 654
+      Height = 15
+      Top = 70
+      Width = 14
+      Caption = 'Pr:'
+      ParentColor = False
+    end
+    object kscomune: TWTComboBoxSql
+      Left = 278
+      Height = 19
+      Top = 67
+      Width = 369
+      Sql.Strings = (
+        'SELECT * FROM COMUNI WHERE COMUNE CONTAINING :COMUNE'
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'IDCOMUNE'
+      LookDisplay = 'COMUNE'
+      OnExit = kscomuneExit
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 13
+    end
+    object Pr: TumEdit
+      Left = 679
+      Height = 22
+      Top = 67
+      Width = 32
+      Alignment = taCenter
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 14
+      Attrib = [AtSay, AtClear, AtMake, AtEnable, AtFind, AtPaste]
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label12: TLabel
+      Left = 742
+      Height = 15
+      Top = 42
+      Width = 44
+      Caption = 'S. Civile:'
+      ParentColor = False
+    end
+    object Label13: TLabel
+      Left = 1005
+      Height = 15
+      Top = 42
+      Width = 25
+      Caption = 'Figli:'
+      ParentColor = False
+    end
+    object figli: TumEdit
+      Left = 1039
+      Height = 21
+      Top = 39
+      Width = 23
+      Alignment = taCenter
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 11
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label14: TLabel
+      Left = 740
+      Height = 15
+      Top = 70
+      Width = 50
+      Caption = 'Arruolato'
+      ParentColor = False
+    end
+    object arruolato: TWDateEdit
+      Cursor = crHandPoint
+      Left = 801
+      Height = 21
+      Top = 67
+      Width = 100
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      ReadOnly = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 15
+      Text = '  /  /    '
+      TypeFind = '='
+    end
+    object Label15: TLabel
+      Left = 7
+      Height = 15
+      Top = 99
+      Width = 47
+      Caption = 'REPARTO'
+      Font.Color = clRed
+      ParentColor = False
+      ParentFont = False
+    end
+    object ksreparto: TWTComboBoxSql
+      Left = 71
+      Height = 19
+      Top = 95
+      Width = 275
+      Sql.Strings = (
+        'SELECT * FROM REPARTI WHERE REPARTO CONTAINING :REPARTO'
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'IDREPARTO'
+      LookDisplay = 'REPARTO'
+      OnExit = ksrepartoExit
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 16
+    end
+    object Label16: TLabel
+      Left = 355
+      Height = 15
+      Top = 99
+      Width = 88
+      Caption = 'ARTICOLAZIONE'
+      Font.Color = clRed
+      ParentColor = False
+      ParentFont = False
+    end
+    object ksarticolazione: TWTComboBoxSql
+      Left = 452
+      Height = 17
+      Top = 97
+      Width = 311
+      Sql.Strings = (
+        'SELECT * FROM ARTICOLAZIONI '
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'IDARTICOLAZIONE'
+      LookDisplay = 'ARTICOLAZIONE'
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -9
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 17
+    end
+    object Label17: TLabel
+      Left = 567
+      Height = 15
+      Top = 170
+      Width = 62
+      Caption = 'Servizio Op.'
+      ParentColor = False
+    end
+    object operativo: TumValidEdit
+      Left = 634
+      Height = 22
+      Top = 167
+      Width = 24
+      Alignment = taCenter
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 27
+      TypeFind = '='
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ValidChars = 'SN'
+    end
+    object Note: TWTMemo
+      Left = 8
+      Height = 48
+      Top = 263
+      Width = 1119
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 33
+      TypeFind = 'Containing'
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label18: TLabel
+      Left = 7
+      Height = 15
+      Top = 247
+      Width = 29
+      Caption = 'Note:'
+      ParentColor = False
+    end
+    object cont: TumValidEdit
+      Left = 278
+      Height = 22
+      Top = 11
+      Width = 24
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 2
+      TypeFind = '='
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ValidChars = 'OM'
+    end
+    object Sesso: TumValidEdit
+      Left = 366
+      Height = 22
+      Top = 11
+      Width = 24
+      Alignment = taCenter
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 3
+      TypeFind = '='
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ValidChars = 'MF'
+    end
+    object CAT: TumValidEdit
+      Left = 452
+      Height = 22
+      Top = 11
+      Width = 25
+      Alignment = taCenter
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 4
+      Attrib = [AtUpdate, AtSay, AtClear, AtMake, AtEnable, AtFind, AtPaste, AtProcedure]
+      TypeFind = '='
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ValidChars = 'UISM'
+    end
+    object Label19: TLabel
+      Left = 7
+      Height = 15
+      Top = 136
+      Width = 59
+      Caption = 'Data Grado'
+      ParentColor = False
+    end
+    object datagrado: TWDateEdit
+      Cursor = crHandPoint
+      Left = 71
+      Height = 21
+      Top = 134
+      Width = 109
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      ReadOnly = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 21
+      Text = '  /  /    '
+      TypeFind = '='
+    end
+    object Label20: TLabel
+      Left = 767
+      Height = 15
+      Top = 100
+      Width = 11
+      Caption = 'Pr'
+      ParentColor = False
+    end
+    object provinciale: TumEdit
+      Left = 785
+      Height = 22
+      Top = 97
+      Width = 28
+      Alignment = taCenter
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 18
+      Attrib = [AtSay, AtClear, AtMake, AtEnable, AtFind, AtPaste]
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label21: TLabel
+      Left = 7
+      Height = 32
+      Top = 165
+      Width = 65
+      AutoSize = False
+      Caption = 'Cellulare Servizio'
+      ParentColor = False
+      WordWrap = True
+    end
+    object celservizio: TumEdit
+      Left = 72
+      Height = 21
+      Top = 168
+      Width = 105
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 25
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object ksstatocivile: TWTComboBoxSql
+      Left = 792
+      Height = 18
+      Top = 39
+      Width = 201
+      Sql.Strings = (
+        'SELECT * FROM statocivile '
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'idstatocivile'
+      LookDisplay = 'statocivile'
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 10
+    end
+    object Label22: TLabel
+      Cursor = crHandPoint
+      Left = 7
+      Height = 15
+      Hint = 'Inserimento nuovo titolo di studio'
+      Top = 232
+      Width = 56
+      Caption = 'T.lo Studio'
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+      WordWrap = True
+      OnClick = Label22Click
+    end
+    object KStitolodistudio: TWTComboBoxSql
+      Left = 71
+      Height = 18
+      Top = 229
+      Width = 722
+      Sql.Strings = (
+        'SELECT * FROM titolidistudio WHERE titolodistudio containing  :titolodistudio'
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'idstudio'
+      LookDisplay = 'titolodistudio'
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 32
+    end
+    object Label23: TLabel
+      Left = 664
+      Height = 15
+      Top = 170
+      Width = 21
+      Caption = 'Nos'
+      ParentColor = False
+    end
+    object nos: TumValidEdit
+      Left = 691
+      Height = 22
+      Top = 167
+      Width = 24
+      Alignment = taCenter
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 28
+      TypeFind = '='
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ValidChars = 'SN'
+    end
+    object Label24: TLabel
+      Left = 184
+      Height = 32
+      Top = 165
+      Width = 105
+      AutoSize = False
+      Caption = 'Utenze Telefoniche Private'
+      ParentColor = False
+      WordWrap = True
+    end
+    object telprivato: TumEdit
+      Left = 296
+      Height = 21
+      Top = 168
+      Width = 265
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 26
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label25: TLabel
+      Left = 196
+      Height = 15
+      Top = 120
+      Width = 141
+      Caption = 'Ultime note Caratteristiche'
+      ParentColor = False
+    end
+    object ksvalutazione: TWTComboBoxSql
+      Left = 196
+      Height = 18
+      Top = 136
+      Width = 434
+      Sql.Strings = (
+        'SELECT * FROM VALUTAZIONI WHERE VALUTAZIONE CONTAINING :VALUTAZIONE'
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'idvalutazioni'
+      LookDisplay = 'valutazione'
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 22
+    end
+    object ksresidenza: TWTComboBoxSql
+      Left = 71
+      Height = 18
+      Top = 202
+      Width = 368
+      Sql.Strings = (
+        'SELECT PR,IDCOMUNE,COMUNE AS COMUNERES FROM COMUNI WHERE COMUNE CONTAINING :COMUNERES'
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'IDCOMUNE'
+      LookDisplay = 'COMUNERES'
+      OnExit = ksresidenzaExit
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 30
+    end
+    object Label26: TLabel
+      Left = 526
+      Height = 15
+      Top = 206
+      Width = 16
+      Caption = 'Via'
+      ParentColor = False
+    end
+    object viaresidenza: TumEdit
+      Left = 553
+      Height = 21
+      Top = 200
+      Width = 417
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 31
+      TypeFind = 'Containing'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label27: TLabel
+      Left = 7
+      Height = 15
+      Top = 204
+      Width = 55
+      Caption = 'Residenza:'
+      ParentColor = False
+    end
+    object dataposizione: TWDateEdit
+      Cursor = crHandPoint
+      Left = 942
+      Height = 21
+      Top = 7
+      Width = 113
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      ReadOnly = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 6
+      Text = '  /  /    '
+      Attrib = [AtInsert, AtSay, AtClear, AtMake, AtEnable, AtFind, AtPaste, AtProcedure]
+      TypeFind = '='
+    end
+    object Label28: TLabel
+      Left = 854
+      Height = 15
+      Top = 11
+      Width = 80
+      Caption = 'Data Posizione:'
+      ParentColor = False
+    end
+    object dataarrivo: TWDateEdit
+      Cursor = crHandPoint
+      Left = 1012
+      Height = 21
+      Top = 97
+      Width = 105
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      ReadOnly = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 20
+      Text = '  /  /    '
+      TypeFind = '='
+    end
+    object Label29: TLabel
+      Left = 1007
+      Height = 15
+      Top = 80
+      Width = 115
+      Caption = 'Data Arrivo al Reparto'
+      ParentColor = False
+      WordWrap = True
+    end
+    object Label31: TLabel
+      Left = 824
+      Height = 15
+      Top = 100
+      Width = 42
+      Caption = 'Incarico'
+      ParentColor = False
+    end
+    object INCARICO: TWTComboBox
+      Left = 872
+      Height = 21
+      Top = 98
+      Width = 135
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ItemHeight = 13
+      Items.Strings = (
+        ''
+        'COMANDANTE'
+        'ADDETTO'
+        'CAPOSEZIONE'
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+        ''
+      )
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 19
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label32: TLabel
+      Left = 800
+      Height = 15
+      Top = 136
+      Width = 81
+      Caption = 'Scadenza n.car.'
+      ParentColor = False
+    end
+    object scadenzadc: TWDateEdit
+      Cursor = crHandPoint
+      Left = 896
+      Height = 21
+      Top = 133
+      Width = 100
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      ReadOnly = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 24
+      Text = '  /  /    '
+      TypeFind = '='
+    end
+    object presente: TWTCheckBox
+      Left = 1076
+      Height = 19
+      Hint = 'Se spuntato permette di visualizzare solo i militari in servizio'
+      Top = 9
+      Width = 65
+      Caption = 'Presente'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 34
+      Attrib = []
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = False
+    end
+    object Prr: TumEdit
+      Left = 476
+      Height = 22
+      Top = 200
+      Width = 32
+      Alignment = taCenter
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 35
+      Attrib = [AtSay, AtClear, AtMake, AtEnable, AtFind, AtPaste]
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label33: TLabel
+      Left = 452
+      Height = 15
+      Top = 204
+      Width = 14
+      Caption = 'Pr:'
+      ParentColor = False
+    end
+    object Label34: TLabel
+      Left = 640
+      Height = 15
+      Top = 136
+      Width = 20
+      Caption = 'Dal:'
+      ParentColor = False
+    end
+    object NoteCarDal: TWDateEdit
+      Cursor = crHandPoint
+      Left = 683
+      Height = 21
+      Top = 133
+      Width = 100
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      ReadOnly = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 23
+      Text = '  /  /    '
+      TypeFind = '='
+    end
+    object FOTO: TWTimage
+      Left = 1014
+      Height = 122
+      Top = 132
+      Width = 112
+      ReadOnly = False
+      MaxSizeKB = 40
+      Attrib = [AtInsert, AtUpdate, AtSay, AtClear, AtMake, AtEnable, AtPaste, AtProcedure]
+      WidthMax = 256
+      HeightMax = 329
+      BevelInner = bvLowered
+      BevelOuter = bvLowered
+      BorderWidth = 1
+      ClientHeight = 122
+      ClientWidth = 112
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 36
+    end
+    object ksocchi: TWTComboBoxSql
+      Left = 562
+      Height = 18
+      Top = 319
+      Width = 176
+      Sql.Strings = (
+        'SELECT * FROM occhi '
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'id'
+      LookDisplay = 'occhio'
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 40
+    end
+    object Label36: TLabel
+      Left = 10
+      Height = 15
+      Top = 322
+      Width = 103
+      Caption = 'Gruppo Sanguigno:'
+      ParentColor = False
+    end
+    object sangue: TumEdit
+      Left = 115
+      Height = 22
+      Top = 319
+      Width = 33
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 37
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label37: TLabel
+      Left = 161
+      Height = 15
+      Top = 322
+      Width = 40
+      Caption = 'Statura:'
+      ParentColor = False
+    end
+    object altezza: TumEdit
+      Left = 210
+      Height = 22
+      Top = 319
+      Width = 33
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 38
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+    object Label38: TLabel
+      Left = 258
+      Height = 15
+      Top = 322
+      Width = 39
+      Caption = 'Capelli:'
+      ParentColor = False
+    end
+    object Label39: TLabel
+      Left = 514
+      Height = 15
+      Top = 322
+      Width = 34
+      Caption = 'Occhi:'
+      ParentColor = False
+    end
+    object kscapelli: TWTComboBoxSql
+      Left = 306
+      Height = 19
+      Top = 319
+      Width = 192
+      Sql.Strings = (
+        'SELECT * FROM capelli'
+      )
+      Database = DM.DB
+      Transaction = DM.TR
+      LookField = 'id'
+      LookDisplay = 'capello'
+      OnExit = ksrepartoExit
+      ShowFocusColor = True
+      FocusColor = 16244949
+      ReadOnly = True
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 39
+    end
+    object Label30: TLabel
+      Left = 729
+      Height = 14
+      Top = 170
+      Width = 93
+      Caption = 'Codice Fiscale:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object CF: TumEdit
+      Left = 829
+      Height = 22
+      Top = 165
+      Width = 168
+      CharCase = ecUppercase
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 16
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 29
+      TypeFind = 'Starting'
+      ColorDisabled = clWindow
+      ShowFocusColor = True
+      FocusColor = 16244949
+    end
+  end
+  object PC: TPageControl
+    Left = 0
+    Height = 266
+    Top = 400
+    Width = 1151
+    ActivePage = TSOnorificenze
+    Align = alClient
+    Images = main.ImageList3
+    TabIndex = 12
+    TabOrder = 1
+    OnChange = PCChange
+    object TSgradi: TTabSheet
+      Caption = 'Gradi'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+    end
+    object TStrasferimenti: TTabSheet
+      Caption = 'Sede Servizio'
+    end
+    object TSspecializzazioni: TTabSheet
+      Caption = 'SPE.QU.AB'
+    end
+    object TSarma: TTabSheet
+      Caption = 'Arma'
+    end
+    object TSFamiliari: TTabSheet
+      Caption = 'Familiari'
+    end
+    object TSAltreFFAA: TTabSheet
+      Caption = 'Altre FFAA'
+    end
+    object TSPatenti: TTabSheet
+      Caption = 'Patenti'
+    end
+    object TSTessere: TTabSheet
+      Caption = 'Tessere'
+    end
+    object TSStatoGiuridico: TTabSheet
+      Caption = 'Posizione'
+    end
+    object TSValutazione: TTabSheet
+      Caption = 'Doc. Caretteristica'
+    end
+    object TSCorsi: TTabSheet
+      Caption = 'Corsi'
+    end
+    object TSRicompense: TTabSheet
+      Caption = 'Ricompense'
+    end
+    object TSOnorificenze: TTabSheet
+      Caption = 'Onorificenze'
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 36
+    Top = 666
+    Width = 1151
+    Align = alBottom
+    BevelInner = bvRaised
+    BorderWidth = 1
+    BorderStyle = bsSingle
+    Caption = 'Panel3'
+    ClientHeight = 32
+    ClientWidth = 1147
+    TabOrder = 2
+    object Image2: TImage
+      Cursor = crHandPoint
+      Left = 3
+      Height = 26
+      Top = 3
+      Width = 1141
+      AntialiasingMode = amOn
+      Align = alClient
+      Center = True
+      Picture.Data = {
+        0954474946496D616765FB00000047494638396110001B00C40000E6F0DA94B2
+        71E2EDD3ABC985BCD896E0ECD0E3EED6DDEACBC6DEA6000000CAE0AF99B875A0
+        BE7CFFFFFFB6D491B1CE8BCFE3B5C1DB9EA5C380D2E5BBE5EFD9000000000000
+        00000000000000000000000000000000000000000000000000000021F9040000
+        0000002C0000000010001B0000057960238E64D92468AAAE09E0BE702CCF746D
+        DF78AECF54EFFF408A61482C1A0D82A472C914149ED0A8B470A85AAFD8C364CB
+        ED7A2790B0784C8628CEE8B45A8168BBDF7044644EAFDB2384BC7ECF2738FE80
+        81820E0F858687880F038B8C8D8E031291929394120C9798999A0C0B9D9E9FA0
+        0B01A3A4A5A6012100
+      }
+      Stretch = True
+    end
+    object Lcontatore: TLabel
+      Left = 894
+      Height = 15
+      Top = 9
+      Width = 9
+      Caption = '...'
+      Font.Color = clBlue
+      ParentColor = False
+      ParentFont = False
+    end
+    object lmilitari: TLabel
+      Left = 16
+      Height = 14
+      Top = 10
+      Width = 64
+      Caption = 'LMILITARE'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Lgrant: TLabel
+      Left = 488
+      Height = 13
+      Top = 9
+      Width = 12
+      Caption = '...'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 32
+    Top = 368
+    Width = 1151
+    Align = alTop
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    ClientHeight = 32
+    ClientWidth = 1151
+    TabOrder = 3
+    object Image1: TImage
+      Left = 2
+      Height = 28
+      Top = 2
+      Width = 1147
+      Align = alClient
+      Picture.Data = {
+        0954474946496D616765FB00000047494638396110001B00C40000E6F0DA94B2
+        71E2EDD3ABC985BCD896E0ECD0E3EED6DDEACBC6DEA6000000CAE0AF99B875A0
+        BE7CFFFFFFB6D491B1CE8BCFE3B5C1DB9EA5C380D2E5BBE5EFD9000000000000
+        00000000000000000000000000000000000000000000000000000021F9040000
+        0000002C0000000010001B0000057960238E64D92468AAAE09E0BE702CCF746D
+        DF78AECF54EFFF408A61482C1A0D82A472C914149ED0A8B470A85AAFD8C364CB
+        ED7A2790B0784C8628CEE8B45A8168BBDF7044644EAFDB2384BC7ECF2738FE80
+        81820E0F858687880F038B8C8D8E031291929394120C9798999A0C0B9D9E9FA0
+        0B01A3A4A5A6012100
+      }
+      Stretch = True
+    end
+    object LabelTitolo: TLabel
+      Left = 2
+      Height = 28
+      Top = 2
+      Width = 1147
+      Align = alClient
+      Alignment = taCenter
+      Caption = 'Scheda Personale'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clRed
+      Font.Height = -16
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+    end
+    object SBfiltro: TSpeedButton
+      Left = 1088
+      Height = 22
+      Hint = 'Ricerca nelle Schede Personali'
+      Top = 7
+      Width = 23
+      Flat = True
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000000000000
+        00060000000E000000160000001E000000270000002E00000034000000340000
+        002E000000270000001E000000160000000D0202022E00000000000000000000
+        0001000000020000000300000004000000050000000600000007000000070000
+        000600000005000000040000000405050591171717FC5555554B000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000A0A0A901C1C1CFF161616E459595924000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000E0E0E90313131FF171717E40606062700000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000012121290434343FF171717E4060606270000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000001414
+        148F515151FF181818E406060627000000000000000000000000000000000000
+        00005A5A5A097A7A7A6A939393AC979797B78989898D6262622A464646364545
+        45FE171717E40606062700000000000000000000000000000000000000005F5F
+        5F1FABABABD6E0E0E0FFF9F9F9FFFDFDFDFFEEEEEEFFC7C7C7F9ACACACF67C7C
+        7C9500000018000000000000000000000000000000000000000090909005A2A2
+        A2D0E6E6E6FFF9F9F9FFFEFEFEFFFEFEFEFFFDFDFDFFF5F5F5FFC4C4C4FF6868
+        6849000000000000000000000000000000000000000000000000A7A7A753C4C4
+        C4FFE0E0E0FFEAEAEAFFF2F2F2FFF4F4F4FFEFEFEFFFE5E5E5FFD8D8D8FF9696
+        96C2000000000000000000000000000000000000000000000000BDBDBD88C4C4
+        C4FFD2D2D2FFDBDBDBFFE1E1E1FFE2E2E2FFDFDFDFFFD6D6D6FFD1D1D1FFAEAE
+        AEF4585858040000000000000000000000000000000000000000BDBDBD8BC4C4
+        C4FFD6D6D6FFDBDBDBFFDCDCDCFFDDDDDDFFDCDCDCFFDADADAFFD1D1D1FFAFAF
+        AFF7585858050000000000000000000000000000000000000000ACACAC5DBBBB
+        BBFFE1E1E1FFE7E7E7FFE7E7E7FFE7E7E7FFE7E7E7FFE7E7E7FFD0D0D0FF9898
+        98CD0000000000000000000000000000000000000000000000009090900AA3A3
+        A3E0D7D7D7FFF3F3F3FFF2F2F2FFF2F2F2FFF2F2F2FFEEEEEEFFB4B4B4FF7373
+        7359000000000000000000000000000000000000000000000000000000006565
+        6532A7A7A7EAC9C9C9FFF0F0F0FFF5F5F5FFDEDEDEFFB4B4B4FF8383838B0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00005D5D5D188787878E939393D2959595DB8E8E8EB36E6E6E49000000000000
+        0000000000000000000000000000000000000000000000000000
+      }
+      OnClick = SBfiltroClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 11
+    Top = 0
+    Width = 1151
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 11
+    ClientWidth = 1151
+    TabOrder = 4
+    object Image3: TImage
+      Left = 0
+      Height = 11
+      Top = 0
+      Width = 1151
+      Align = alClient
+      Picture.Data = {
+        0A544A706567496D616765E2020000FFD8FFE000104A46494600010101006000
+        600000FFDB004300020101020101020202020202020203050303030303060404
+        0305070607070706070708090B0908080A0807070A0D0A0A0B0C0C0C0C07090E
+        0F0D0C0E0B0C0C0CFFDB004301020202030303060303060C0807080C0C0C0C0C
+        0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C
+        0C0C0C0C0C0C0C0C0C0C0C0C0CFFC0001108001B001003012200021101031101
+        FFC4001F0000010501010101010100000000000000000102030405060708090A
+        0BFFC400B5100002010303020403050504040000017D01020300041105122131
+        410613516107227114328191A1082342B1C11552D1F02433627282090A161718
+        191A25262728292A3435363738393A434445464748494A535455565758595A63
+        6465666768696A737475767778797A838485868788898A92939495969798999A
+        A2A3A4A5A6A7A8A9AAB2B3B4B5B6B7B8B9BAC2C3C4C5C6C7C8C9CAD2D3D4D5D6
+        D7D8D9DAE1E2E3E4E5E6E7E8E9EAF1F2F3F4F5F6F7F8F9FAFFC4001F01000301
+        01010101010101010000000000000102030405060708090A0BFFC400B5110002
+        0102040403040705040400010277000102031104052131061241510761711322
+        328108144291A1B1C109233352F0156272D10A162434E125F11718191A262728
+        292A35363738393A434445464748494A535455565758595A636465666768696A
+        737475767778797A82838485868788898A92939495969798999AA2A3A4A5A6A7
+        A8A9AAB2B3B4B5B6B7B8B9BAC2C3C4C5C6C7C8C9CAD2D3D4D5D6D7D8D9DAE2E3
+        E4E5E6E7E8E9EAF2F3F4F5F6F7F8F9FAFFDA000C03010002110311003F00FD9E
+        FF00849B52FF00A085F7FDFF006FF1A3FE126D4BFE8217DFF7FDBFC6B8BFF858
+        967FF3DBFF001D3FE147FC2C4B3FF9EDFF008E9FF0AFA0FAB4BF94F03EB31FE6
+        3E59FF0085CC3FE7A8FCE8FF0085CC3FE7A8FCEBE77FED7B9FF9ED27E747F6BD
+        CFFCF693F3AFB2F671EC7C7734BB9FFFD9
+      }
+      Stretch = True
+    end
+  end
+  object ECdati: TwtEditCompNew
+    DataSet = DM.DSetDati
+    Table = 'ANAGRAFICA'
+    OnBeforeFind = ECdatiBeforeFind
+    OnBeforeUpdate = ECdatiBeforeUpdate
+    OnBeforeDelete = ECdatiBeforeDelete
+    OnContatore = ECdatiContatore
+    left = 584
+    top = 456
+  end
+  object MainMenu: TMainMenu
+    Images = main.ImageList1
+    left = 400
+    top = 456
+    object MIexl: TMenuItem
+      AutoCheck = True
+      Caption = 'Esporta in Excel'
+      ImageIndex = 4
+      OnClick = MIexlClick
+    end
+    object MIword: TMenuItem
+      Caption = 'Modelli Word'
+      ImageIndex = 5
+      OnClick = MIwordClick
+    end
+    object MIStampe: TMenuItem
+      Caption = 'Stampe'
+      ImageIndex = 3
+      object MIStampaScheda: TMenuItem
+        Caption = 'Stampa Scheda'
+        ImageIndex = 3
+        OnClick = MIStampaSchedaClick
+      end
+      object MIPrintDati: TMenuItem
+        Caption = 'Stampa Dati Mililtare in formato XlS'
+        ImageIndex = 4
+        OnClick = MIPrintDatiClick
+      end
+      object MIStampaSchedaPdf: TMenuItem
+        Caption = 'Stampa Scheda in formato pdf'
+        ImageIndex = 9
+        OnClick = MIStampaSchedaPdfClick
+      end
+      object MIStampaAllSchedaPdf: TMenuItem
+        Caption = 'Crea le Schede Pdf dei Nominativi Filtrati'
+        ImageIndex = 9
+        OnClick = MIStampaAllSchedaPdfClick
+      end
+      object MIRichiestaTessera: TMenuItem
+        Caption = 'Stampa Modello Richiesta Tessera'
+        ImageIndex = 3
+        OnClick = MIRichiestaTesseraClick
+      end
+      object MIDesign: TMenuItem
+        Caption = 'Design Report'
+        object MenuItem3: TMenuItem
+          Caption = 'Reporto Elenco Nominativi'
+          OnClick = MenuItem3Click
+        end
+        object MenuItem4: TMenuItem
+          Caption = 'Report Scheda'
+          OnClick = MenuItem4Click
+        end
+        object MenuItem5: TMenuItem
+          Caption = 'Report Scadenze'
+          OnClick = MenuItem5Click
+        end
+        object MITessera: TMenuItem
+          Caption = 'Report Richiesta Tessera'
+          OnClick = MITesseraClick
+        end
+      end
+    end
+    object MIViewReparti: TMenuItem
+      Caption = 'Reparti'
+      ImageIndex = 8
+    end
+    object MIcomunicazioni: TMenuItem
+      Caption = 'Comunicazioni'
+      ImageIndex = 10
+      object MenuItem2: TMenuItem
+        Caption = 'Invio Documentazione Caratteristica'
+        ImageIndex = 10
+        OnClick = MenuItem2Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Inserimento Multiplo Valutazioni'
+        ImageIndex = 10
+        OnClick = MenuItem6Click
+      end
+    end
+    object MItabelle: TMenuItem
+      Caption = 'Tabelle'
+      ImageIndex = 12
+      object MenuItem7: TMenuItem
+        Caption = 'SPEQUAB'
+        ImageIndex = 12
+        OnClick = MenuItem7Click
+      end
+    end
+  end
+  object SavePictureDialog1: TSavePictureDialog
+    Filter = 'Graphic (*.jpg;*.ico;*.ppm;*.pgm;*.pbm;*.png;*.xpm;*.bmp)|*.jpg;*.ico;*.ppm;*.pgm;*.pbm;*.png;*.xpm;*.bmp|Joint Picture Expert Group (*.jpg)|*.jpg|Icon (*.ico)|*.ico|Portable PixMap (*.ppm)|*.ppm|Portable GrayMap (*.pgm)|*.pgm|Portable BitMap (*.pbm)|*.pb'
+    left = 875
+    top = 276
+  end
+  object PMnav: TPopupMenu
+    left = 901
+    top = 489
+    object MIfiltro: TMenuItem
+      Caption = 'Visualizza Filtro'
+      OnClick = MIfiltroClick
+    end
+  end
+end

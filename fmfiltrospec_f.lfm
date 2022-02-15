@@ -1,0 +1,302 @@
+object FmFiltroSpec: TFmFiltroSpec
+  Left = 373
+  Height = 412
+  Top = 307
+  Width = 1037
+  Caption = 'Ricerca Specializzati'
+  ClientHeight = 392
+  ClientWidth = 1037
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '1.4.4.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 392
+    Top = 0
+    Width = 1037
+    Align = alClient
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    ClientHeight = 392
+    ClientWidth = 1037
+    TabOrder = 0
+    object PC: TPageControl
+      Left = 2
+      Height = 388
+      Top = 2
+      Width = 1033
+      ActivePage = TSspec
+      Align = alClient
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabIndex = 0
+      TabOrder = 0
+      OnChange = PCChange
+      object TSspec: TTabSheet
+        Caption = 'Specializzazioni'
+        ClientHeight = 359
+        ClientWidth = 1025
+        object Panel5: TPanel
+          Left = 0
+          Height = 44
+          Top = 0
+          Width = 1025
+          Align = alTop
+          BevelInner = bvRaised
+          BorderStyle = bsSingle
+          ClientHeight = 40
+          ClientWidth = 1021
+          TabOrder = 0
+          object ImSpec: TImage
+            Left = 2
+            Height = 36
+            Top = 2
+            Width = 1017
+            Align = alClient
+            Picture.Data = {
+              07544269746D6170E6050000424DE60500000000000036040000280000001000
+              00001B0000000100080000000000B00100000000000000000000000100000001
+              0000F0E6DA00B2947100EDE2D300C9AB8500D8BC9600ECE0D000EEE3D600EADD
+              CB00DEC6A600EFE5D900E0CAAF00B899750000000000D4B69100BEA07C00DBC1
+              9E00E5D2BB00CEB18B00FFFFFF00E3CFB500C3A5800000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000010101010101010101010101010101010B0B0B0B0B0B0B0B0B0B0B0B0B0B
+              0B0B0E0E0E0E0E0E0E0E0E0E0E0E0E0E0E0E1414141414141414141414141414
+              1414030303030303030303030303030303031111111111111111111111111111
+              11110D0D0D0D0D0D0D0D0D0D0D0D0D0D0D0D0404040404040404040404040404
+              04040F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0808080808080808080808080808
+              08080A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A1313131313131313131313131313
+              1313101010101010101010101010101010100707070707070707070707070707
+              0707050505050505050505050505050505050202020202020202020202020202
+              0202060606060606060606060606060606060909090909090909090909090909
+              0909000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C
+              0C0C12121212121212121212121212121212
+            }
+            Stretch = True
+          end
+          object CBspec: TWTComboBoxSql
+            Left = 217
+            Height = 22
+            Top = 8
+            Width = 525
+            Sql.Strings = (
+              'SELECT IDSPEC, SPECIALIZZAZIONE, CODSPEC,AREAIMPIEGO, SPEQUAB'
+              'FROM SPECIALIZZAZIONI  WHERE  SPECIALIZZAZIONE  CONTAINING :SPECIALIZZAZIONE'
+            )
+            Database = DM.DB
+            Transaction = DM.TR
+            LookField = 'idspec'
+            LookDisplay = 'SPECIALIZZAZIONE'
+            ShowFocusColor = True
+            FocusColor = clNone
+            CharCase = ecUppercase
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -13
+            Font.Name = 'Verdana'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            ParentFont = False
+            TabOrder = 0
+          end
+          object Label2: TLabel
+            Left = 59
+            Height = 18
+            Top = 11
+            Width = 121
+            Caption = 'Specializzazione'
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Verdana'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            ParentColor = False
+            ParentFont = False
+          end
+          object SBRicSpec: TSpeedButton
+            Left = 760
+            Height = 23
+            Top = 9
+            Width = 72
+            Caption = 'Ricerca'
+            OnClick = SBRicSpecClick
+          end
+        end
+        object sgspec: TwtStringGridSql
+          Left = 0
+          Height = 315
+          Top = 44
+          Width = 1025
+          Align = alClient
+          Color = clWhite
+          DefaultRowHeight = 18
+          FixedCols = 0
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentFont = False
+          RowCount = 2
+          TabOrder = 1
+          TitleFont.CharSet = ANSI_CHARSET
+          TitleFont.Color = clBlack
+          TitleFont.Height = -13
+          TitleFont.Name = 'Verdana'
+          TitleFont.Pitch = fpVariable
+          TitleFont.Quality = fqDraft
+          TitleStyle = tsStandard
+          Database = DM.DB
+          Transaction = DM.TR
+          Contatore = False
+          ShowNull = False
+        end
+      end
+      object TSpatenti: TTabSheet
+        Caption = 'Patenti'
+        ClientHeight = 360
+        ClientWidth = 1025
+        object Panel6: TPanel
+          Left = 0
+          Height = 44
+          Top = 0
+          Width = 1025
+          Align = alTop
+          BevelInner = bvRaised
+          BorderStyle = bsSingle
+          ClientHeight = 40
+          ClientWidth = 1021
+          TabOrder = 0
+          object ImPatenti: TImage
+            Left = 2
+            Height = 36
+            Top = 2
+            Width = 1017
+            Align = alClient
+            Stretch = True
+          end
+          object Label3: TLabel
+            Left = 48
+            Height = 18
+            Top = 11
+            Width = 51
+            Caption = 'Patenti'
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Verdana'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            ParentColor = False
+            ParentFont = False
+          end
+          object SBRicPatenti: TSpeedButton
+            Left = 702
+            Height = 23
+            Top = 11
+            Width = 72
+            Caption = 'Ricerca'
+            OnClick = SBRicPatentiClick
+          end
+          object cbpatenti: TWTComboBoxSql
+            Left = 140
+            Height = 22
+            Top = 11
+            Width = 510
+            Sql.Strings = (
+              'select idpatente,descrizionepatente from patenti'
+            )
+            Database = DM.DB
+            Transaction = DM.TR
+            LookField = 'idpatente'
+            LookDisplay = 'descrizionepatente'
+            ShowFocusColor = True
+            FocusColor = 16244949
+            CharCase = ecNormal
+            TabOrder = 0
+          end
+        end
+        object sgpatenti: TwtStringGridSql
+          Left = 0
+          Height = 316
+          Top = 44
+          Width = 1025
+          Align = alClient
+          Color = clWhite
+          DefaultRowHeight = 18
+          FixedCols = 0
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentFont = False
+          RowCount = 2
+          TabOrder = 1
+          TitleFont.CharSet = ANSI_CHARSET
+          TitleFont.Color = clBlack
+          TitleFont.Height = -13
+          TitleFont.Name = 'Verdana'
+          TitleFont.Pitch = fpVariable
+          TitleFont.Quality = fqDraft
+          TitleStyle = tsStandard
+          Database = DM.DB
+          Transaction = DM.TR
+          Contatore = False
+          ShowNull = False
+        end
+      end
+    end
+  end
+  object MainMenu1: TMainMenu
+    BidiMode = bdRightToLeft
+    ParentBidiMode = False
+    Images = main.ImageList1
+    left = 951
+    top = 289
+    object MenuItem1: TMenuItem
+      Caption = 'Esporta in Excel'
+      ImageIndex = 4
+      OnClick = MenuItem1Click
+    end
+  end
+end

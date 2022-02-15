@@ -1,0 +1,130 @@
+object FmStampe: TFmStampe
+  Left = 706
+  Height = 325
+  Top = 341
+  Width = 816
+  Caption = 'Stampe'
+  LCLVersion = '1.8.4.0'
+  object frAnagrafica: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    OnEnterRect = frAnagraficaEnterRect
+    left = 184
+    top = 32
+  end
+  object frDesigner1: TfrDesigner
+    left = 296
+    top = 32
+  end
+  object frDset1: TfrDBDataSet
+    DataSet = DSet1
+    left = 88
+    top = 40
+  end
+  object DSet1: TUIBDataSet
+    Transaction = DM.TR
+    Database = DM.DB
+    OnClose = etmStayIn
+    SQL.Strings = (
+      'SELECT p.TIPO, p.MATRMEC, p.COGNOME, p.NOME, p.MODELLO, p.NUMERO, p.SCADENZA, p.NOTE'
+      'FROM ELABORAZIONE_SCADENZE(3) p'
+    )
+    left = 40
+    top = 104
+  end
+  object frShapeObject1: TfrShapeObject
+    left = 408
+    top = 32
+  end
+  object frTNPDFExport1: TfrTNPDFExport
+    left = 120
+    top = 112
+  end
+  object frRoundRectObject1: TfrRoundRectObject
+    left = 520
+    top = 40
+  end
+  object frScadenze: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 212
+    top = 102
+  end
+  object DSetSedi: TUIBDataSet
+    Transaction = DM.TR
+    Database = DM.DB
+    OnClose = etmStayIn
+    left = 40
+    top = 163
+  end
+  object frDSetSedi: TfrDBDataSet
+    DataSet = DSetSedi
+    left = 112
+    top = 168
+  end
+  object DSetGradi: TUIBDataSet
+    Transaction = DM.TR
+    Database = DM.DB
+    OnClose = etmStayIn
+    left = 184
+    top = 168
+  end
+  object frDSetGradi: TfrDBDataSet
+    DataSet = DSetGradi
+    left = 248
+    top = 168
+  end
+  object DsetFA: TUIBDataSet
+    Transaction = DM.TR
+    Database = DM.DB
+    OnClose = etmStayIn
+    left = 44
+    top = 229
+  end
+  object frDSetFA: TfrDBDataSet
+    DataSet = DsetFA
+    left = 112
+    top = 232
+  end
+  object frDSetFamiliari: TfrDBDataSet
+    DataSet = DsetFamiliari
+    left = 264
+    top = 240
+  end
+  object DsetFamiliari: TUIBDataSet
+    Transaction = DM.TR
+    Database = DM.DB
+    OnClose = etmStayIn
+    left = 184
+    top = 240
+  end
+  object SaveDialog1: TSaveDialog
+    left = 343
+    top = 187
+  end
+  object frRichiestaTessera: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    OnGetValue = frRichiestaTesseraGetValue
+    left = 505
+    top = 137
+  end
+  object Qgradi: TUIBQuery
+    Transaction = DM.TR
+    DataBase = DM.DB
+    left = 640
+    top = 102
+  end
+  object QTessera: TUIBQuery
+    Transaction = DM.TR
+    DataBase = DM.DB
+    left = 728
+    top = 104
+  end
+end
