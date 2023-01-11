@@ -18,6 +18,7 @@ type
     DB: TUIBDataBase;
     DSetParenti: TUIBDataSet;
     QTabelle: TUIBQuery;
+    QTemp1: TUIBQuery;
     TR: TUIBTransaction;
     QTemp: TUIBQuery;
     DSetDati: TUIBDataSet;
@@ -91,6 +92,8 @@ begin
 
 //User.matr:= GetRegistryValue; // restituisce la matricola dell'utente che utilizza il computer
 //User.matr:= '852183Q';
+
+//User.matr:= '902708R'; // Cotogno
 
 // User.matr:= '881037E'; // marrone
 //User.matr:= '852183Q' // MALANDRA

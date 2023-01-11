@@ -90,6 +90,8 @@ type
     lmilitari: TLabel;
     MainMenu: TMainMenu;
     matrmec: TumEdit;
+    MIanni: TMenuItem;
+    MIEsporta: TMenuItem;
     MIRichiestaTessera: TMenuItem;
     MITessera: TMenuItem;
     MIfiltro: TMenuItem;
@@ -168,6 +170,8 @@ type
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);
     procedure MenuItem7Click(Sender: TObject);
+    procedure MIanniClick(Sender: TObject);
+    procedure MIEsportaClick(Sender: TObject);
     procedure MIexlClick(Sender: TObject);
     procedure MIfiltroClick(Sender: TObject);
     procedure MIPrintDatiClick(Sender: TObject);
@@ -303,14 +307,24 @@ begin
      fmmodspec.ShowModal;
 end;
 
+procedure TFmDatiPersonali.MIanniClick(Sender: TObject);
+begin
+   if matrmec.Text <> '' then
+      fmexportexcel.EsportaAnni;
+end;
 
+procedure TFmDatiPersonali.MIEsportaClick(Sender: TObject);
+begin
+    if matrmec.Text <> '' then
+      fmexportexcel.ShowModal;
+end;
 
 procedure TFmDatiPersonali.MIexlClick(Sender: TObject);
 begin
-   if matrmec.Text <> '' then
-      fmexportexcel.ShowModal;
-//  EsportaEXL(DM.DSetDati);
+
 end;
+
+
 
 procedure TFmDatiPersonali.MIfiltroClick(Sender: TObject);
 begin

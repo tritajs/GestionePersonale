@@ -1,12 +1,12 @@
 object FmExportExcel: TFmExportExcel
-  Left = 646
-  Height = 295
-  Top = 331
+  Left = 393
+  Height = 331
+  Top = 333
   Width = 678
   Caption = 'FmExportExcel'
-  ClientHeight = 295
+  ClientHeight = 331
   ClientWidth = 678
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '2.2.2.0'
   object Panel1: TPanel
     Left = 0
     Height = 33
@@ -95,7 +95,7 @@ object FmExportExcel: TFmExportExcel
   end
   object CGcampi: TCheckGroup
     Left = 0
-    Height = 216
+    Height = 264
     Top = 32
     Width = 678
     AutoFill = True
@@ -107,7 +107,7 @@ object FmExportExcel: TFmExportExcel
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 4
-    ClientHeight = 196
+    ClientHeight = 244
     ClientWidth = 674
     Columns = 4
     Items.Strings = (
@@ -120,6 +120,9 @@ object FmExportExcel: TFmExportExcel
       'nato'
       'comune'
       'pr'
+      'comuneres'
+      'prr'
+      'viaresidenza'
       'figli'
       'arruolato'
       'reparto'
@@ -135,23 +138,23 @@ object FmExportExcel: TFmExportExcel
       'datagrado'
       'titolodistudio'
       'valutazione'
-      'comuneres'
-      'viaresidenza'
       'sangue'
       'incarico'
       'dataposizione'
       'cf'
+      'celservizio'
+      'telprivato'
     )
     TabOrder = 1
     Data = {
-      1E00000002020202020202020202020202020202020202020202020202020202
-      0202
+      2100000002020202020202020202020202020202020202020202020202020202
+      0202020202
     }
   end
   object Panel2: TPanel
     Left = 0
     Height = 37
-    Top = 258
+    Top = 294
     Width = 678
     Align = alBottom
     BevelInner = bvLowered

@@ -14,3 +14,13 @@ CH116AQ052SIC01	Thu Apr 15 12:23:33 2021
 CH116AQ052SIC01	Thu Apr 15 12:23:44 2021
 	INET/inet_error: read errno = 10054, server host = 10.202.64.102, address = 10.202.64.102/3050
 
+
+CH116AQ052SIC01	Fri Sep 02 09:00:22 2022
+	INET/inet_error: read errno = 10054, server host = 10.202.64.102, address = 10.202.64.102/3050
+
+
+CH116AQ052SIC01	Fri Sep 02 09:00:34 2022
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database.
+	Uncommitted work may have been lost.
+	Error writing data to the connection.
+

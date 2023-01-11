@@ -1,29 +1,29 @@
 object FmDatiPersonali: TFmDatiPersonali
-  Left = 129
-  Height = 722
-  Top = 136
-  Width = 1151
+  Left = 249
+  Height = 664
+  Top = 249
+  Width = 1150
   Caption = 'FmDatiPersonali'
-  ClientHeight = 702
-  ClientWidth = 1151
+  ClientHeight = 644
+  ClientWidth = 1150
   KeyPreview = True
   Menu = MainMenu
   OnClose = FormClose
   OnKeyDown = FormKeyDown
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '2.2.2.0'
   object Pdati: TPanel
     Left = 0
     Height = 357
     Top = 11
-    Width = 1151
+    Width = 1150
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvLowered
     BorderStyle = bsSingle
     ClientHeight = 353
-    ClientWidth = 1147
+    ClientWidth = 1146
     Color = 14543103
     ParentColor = False
     TabOrder = 0
@@ -1125,6 +1125,10 @@ object FmDatiPersonali: TFmDatiPersonali
         ''
         ''
         ''
+        ''
+        ''
+        ''
+        ''
       )
       ParentFont = False
       ReadOnly = True
@@ -1176,6 +1180,8 @@ object FmDatiPersonali: TFmDatiPersonali
       ShowFocusColor = True
       FocusColor = 16244949
       ReadOnly = False
+      ValueChecked = 'T'
+      ValueUnchecked = 'F'
     end
     object Prr: TumEdit
       Left = 476
@@ -1412,9 +1418,9 @@ object FmDatiPersonali: TFmDatiPersonali
   end
   object PC: TPageControl
     Left = 0
-    Height = 266
+    Height = 208
     Top = 400
-    Width = 1151
+    Width = 1150
     ActivePage = TSOnorificenze
     Align = alClient
     Images = main.ImageList3
@@ -1470,22 +1476,22 @@ object FmDatiPersonali: TFmDatiPersonali
   object Panel3: TPanel
     Left = 0
     Height = 36
-    Top = 666
-    Width = 1151
+    Top = 608
+    Width = 1150
     Align = alBottom
     BevelInner = bvRaised
     BorderWidth = 1
     BorderStyle = bsSingle
     Caption = 'Panel3'
     ClientHeight = 32
-    ClientWidth = 1147
+    ClientWidth = 1146
     TabOrder = 2
     object Image2: TImage
       Cursor = crHandPoint
       Left = 3
       Height = 26
       Top = 3
-      Width = 1141
+      Width = 1140
       AntialiasingMode = amOn
       Align = alClient
       Center = True
@@ -1547,18 +1553,18 @@ object FmDatiPersonali: TFmDatiPersonali
     Left = 0
     Height = 32
     Top = 368
-    Width = 1151
+    Width = 1150
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvLowered
     ClientHeight = 32
-    ClientWidth = 1151
+    ClientWidth = 1150
     TabOrder = 3
     object Image1: TImage
       Left = 2
       Height = 28
       Top = 2
-      Width = 1147
+      Width = 1146
       Align = alClient
       Picture.Data = {
         0954474946496D616765FB00000047494638396110001B00C40000E6F0DA94B2
@@ -1577,7 +1583,7 @@ object FmDatiPersonali: TFmDatiPersonali
       Left = 2
       Height = 28
       Top = 2
-      Width = 1147
+      Width = 1146
       Align = alClient
       Alignment = taCenter
       Caption = 'Scheda Personale'
@@ -1643,17 +1649,17 @@ object FmDatiPersonali: TFmDatiPersonali
     Left = 0
     Height = 11
     Top = 0
-    Width = 1151
+    Width = 1150
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 11
-    ClientWidth = 1151
+    ClientWidth = 1150
     TabOrder = 4
     object Image3: TImage
       Left = 0
       Height = 11
       Top = 0
-      Width = 1151
+      Width = 1150
       Align = alClient
       Picture.Data = {
         0A544A706567496D616765E2020000FFD8FFE000104A46494600010101006000
@@ -1691,18 +1697,28 @@ object FmDatiPersonali: TFmDatiPersonali
     OnBeforeUpdate = ECdatiBeforeUpdate
     OnBeforeDelete = ECdatiBeforeDelete
     OnContatore = ECdatiContatore
-    left = 584
-    top = 456
+    Left = 584
+    Top = 456
   end
   object MainMenu: TMainMenu
     Images = main.ImageList1
-    left = 400
-    top = 456
+    Left = 400
+    Top = 456
     object MIexl: TMenuItem
       AutoCheck = True
-      Caption = 'Esporta in Excel'
+      Caption = 'Prospetti in Excel'
       ImageIndex = 4
       OnClick = MIexlClick
+      object MIEsporta: TMenuItem
+        Caption = 'Seleziona Campi da esportare'
+        ImageIndex = 4
+        OnClick = MIEsportaClick
+      end
+      object MIanni: TMenuItem
+        Caption = 'Anni di Servizio'
+        ImageIndex = 4
+        OnClick = MIanniClick
+      end
     end
     object MIword: TMenuItem
       Caption = 'Modelli Word'
@@ -1787,12 +1803,12 @@ object FmDatiPersonali: TFmDatiPersonali
   end
   object SavePictureDialog1: TSavePictureDialog
     Filter = 'Graphic (*.jpg;*.ico;*.ppm;*.pgm;*.pbm;*.png;*.xpm;*.bmp)|*.jpg;*.ico;*.ppm;*.pgm;*.pbm;*.png;*.xpm;*.bmp|Joint Picture Expert Group (*.jpg)|*.jpg|Icon (*.ico)|*.ico|Portable PixMap (*.ppm)|*.ppm|Portable GrayMap (*.pgm)|*.pgm|Portable BitMap (*.pbm)|*.pb'
-    left = 875
-    top = 276
+    Left = 875
+    Top = 276
   end
   object PMnav: TPopupMenu
-    left = 901
-    top = 489
+    Left = 901
+    Top = 489
     object MIfiltro: TMenuItem
       Caption = 'Visualizza Filtro'
       OnClick = MIfiltroClick
