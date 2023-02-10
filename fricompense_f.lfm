@@ -7,8 +7,8 @@ object FrRicompense: TFrRicompense
   ClientHeight = 261
   ClientWidth = 1039
   TabOrder = 0
-  DesignLeft = 221
-  DesignTop = 484
+  DesignLeft = 464
+  DesignTop = 362
   object Panel4: TPanel
     Left = 0
     Height = 37
@@ -626,8 +626,6 @@ object FrRicompense: TFrRicompense
     Top = 96
     Width = 86
     CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
-    OKCaption = 'OK'
-    CancelCaption = 'Cancel'
     DateOrder = doDMY
     ButtonOnlyWhenFocused = True
     ButtonWidth = 0

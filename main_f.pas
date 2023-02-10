@@ -347,7 +347,7 @@ begin
  if autorizzato.Count > 0 then
    begin
      if not Assigned(FmSituazioneForza) then
-            FmSituazioneForza:= TFmSituazioneForza.Create(Application);
+         FmSituazioneForza:= TFmSituazioneForza.Create(Application);
      FmSituazioneForza.Show;
     end;
 end;

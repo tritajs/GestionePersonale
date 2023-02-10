@@ -90,6 +90,7 @@ begin
  user.FileTemp := s + '\temp.xls' ;
 
 
+// User.matr:='942597R'; //di blasio settimio
 //User.matr:= GetRegistryValue; // restituisce la matricola dell'utente che utilizza il computer
 //User.matr:= '852183Q';
 

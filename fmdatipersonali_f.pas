@@ -172,7 +172,6 @@ type
     procedure MenuItem7Click(Sender: TObject);
     procedure MIanniClick(Sender: TObject);
     procedure MIEsportaClick(Sender: TObject);
-    procedure MIexlClick(Sender: TObject);
     procedure MIfiltroClick(Sender: TObject);
     procedure MIPrintDatiClick(Sender: TObject);
     procedure MIRichiestaTesseraClick(Sender: TObject);
@@ -318,12 +317,6 @@ begin
     if matrmec.Text <> '' then
       fmexportexcel.ShowModal;
 end;
-
-procedure TFmDatiPersonali.MIexlClick(Sender: TObject);
-begin
-
-end;
-
 
 
 procedure TFmDatiPersonali.MIfiltroClick(Sender: TObject);
@@ -546,7 +539,11 @@ end;
 
 procedure TFmDatiPersonali.SBfiltroClick(Sender: TObject);
 begin
-  FmRicercaSuSchede.ShowModal;
+ if not Assigned(FmRicercaSuSchede) then
+   begin
+     FmRicercaSuSchede := TFmRicercaSuSchede.Create(Application);
+   end;
+  FmRicercaSuSchede.Show;
 end;
 
 

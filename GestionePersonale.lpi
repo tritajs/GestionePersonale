@@ -185,7 +185,9 @@
       <Unit9>
         <Filename Value="fricompense_f.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrRicompense"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
       </Unit9>
       <Unit10>
         <Filename Value="fronorificenze_f.pas"/>

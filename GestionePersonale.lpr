@@ -21,7 +21,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFmAutorizzazioni, FmAutorizzazioni);
   Application.CreateForm(TFmDatiPersonali, FmDatiPersonali);
-  Application.CreateForm(TFmRicercaSuSchede, FmRicercaSuSchede);
   Application.CreateForm(TFmModelliWord, FmModelliWord);
   Application.CreateForm(TFmComunicazioni, FmComunicazioni);
   Application.CreateForm(TFmExportExcel, FmExportExcel);

@@ -1,7 +1,7 @@
 object FmDatiPersonali: TFmDatiPersonali
-  Left = 249
+  Left = 375
   Height = 664
-  Top = 249
+  Top = 218
   Width = 1150
   Caption = 'FmDatiPersonali'
   ClientHeight = 644
@@ -1129,6 +1129,11 @@ object FmDatiPersonali: TFmDatiPersonali
         ''
         ''
         ''
+        ''
+        ''
+        ''
+        ''
+        ''
       )
       ParentFont = False
       ReadOnly = True
@@ -1708,7 +1713,6 @@ object FmDatiPersonali: TFmDatiPersonali
       AutoCheck = True
       Caption = 'Prospetti in Excel'
       ImageIndex = 4
-      OnClick = MIexlClick
       object MIEsporta: TMenuItem
         Caption = 'Seleziona Campi da esportare'
         ImageIndex = 4

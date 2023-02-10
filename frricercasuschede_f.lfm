@@ -1,15 +1,15 @@
 object FmRicercaSuSchede: TFmRicercaSuSchede
-  Left = 246
-  Height = 674
-  Top = 195
+  Left = 455
+  Height = 650
+  Top = 184
   Width = 1115
   Caption = 'Ricerca'
-  ClientHeight = 674
+  ClientHeight = 650
   ClientWidth = 1115
   Color = clWhite
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '2.2.2.0'
   object Panel5: TPanel
     Left = 0
     Height = 44
@@ -39,21 +39,6 @@ object FmRicercaSuSchede: TFmRicercaSuSchede
         0B01A3A4A5A6012100
       }
       Stretch = True
-    end
-    object Label2: TLabel
-      Left = 504
-      Height = 18
-      Top = 11
-      Width = 62
-      Caption = 'Ricerche'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -15
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
     end
     object SBesporta: TSpeedButton
       Left = 758
@@ -204,11 +189,11 @@ object FmRicercaSuSchede: TFmRicercaSuSchede
       ParentFont = False
     end
     object Presenti: TCheckBox
-      Left = 618
-      Height = 19
-      Top = 13
-      Width = 122
-      Caption = 'Ricerca Sui Presenti'
+      Left = 624
+      Height = 14
+      Top = 16
+      Width = 14
+      AutoSize = False
       Checked = True
       OnChange = PresentiChange
       State = cbChecked
@@ -240,304 +225,37 @@ object FmRicercaSuSchede: TFmRicercaSuSchede
       LookDisplay = 'REPARTO'
       ShowFocusColor = True
       FocusColor = 16244949
-      CharCase = ecNormal
+      CharCase = ecUppercase
       TabOrder = 1
     end
-  end
-  object PanelPistola: TPanel
-    Left = 0
-    Height = 107
-    Top = 44
-    Width = 1115
-    Align = alTop
-    BevelInner = bvLowered
-    BevelOuter = bvLowered
-    BorderWidth = 1
-    ClientHeight = 107
-    ClientWidth = 1115
-    Color = 15653834
-    Font.CharSet = ANSI_CHARSET
-    Font.Height = -13
-    Font.Name = 'Verdana'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-    TabOrder = 1
-    object Label4: TLabel
-      Left = 32
-      Height = 16
-      Top = 56
-      Width = 37
-      Caption = 'Note:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
+    object Label2: TLabel
+      Left = 512
+      Height = 15
+      Top = 15
+      Width = 102
+      Caption = 'Ricerca Sui Presenti'
+      Font.Color = clRed
       ParentColor = False
       ParentFont = False
-    end
-    object Label3: TLabel
-      Left = 556
-      Height = 16
-      Top = 10
-      Width = 112
-      Caption = 'Matricola Canna:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label5: TLabel
-      Left = 412
-      Height = 16
-      Top = 10
-      Width = 114
-      Caption = 'Matricola Pistola:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object ksarma: TWTComboBox
-      Left = 33
-      Height = 24
-      Top = 30
-      Width = 356
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ItemHeight = 16
-      Items.Strings = (
-        ''
-        'P.A.B. MOD. 84BB CAL. 9 CORTO '
-        'P.A.B. MOD. 92FS CAL. 9 PARABELLUM'
-        'PX4 STORM FULL SIZE CAL. 9X19 MM '
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-        ''
-      )
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 0
-      ShowFocusColor = True
-      FocusColor = 12713983
-    end
-    object Label1: TLabel
-      Left = 32
-      Height = 16
-      Top = 10
-      Width = 82
-      Caption = 'Tipo Pistola:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object SBokPistola: TSpeedButton
-      Left = 824
-      Height = 28
-      Hint = 'Conferma i Dati'
-      Top = 56
-      Width = 229
-      AutoSize = True
-      Caption = 'Conderma Ricerca Dati Pistola'
-      Flat = True
-      Glyph.Data = {
-        36090000424D3609000000000000360000002800000018000000180000000100
-        2000000000000009000064000000640000000000000000000000000000000000
-        00000000000000000002000000020000000400000006000000090000000B0000
-        000D0000000D0000000E0000000D0000000B0000000800000007000000050000
-        0003000000030000000200000001000000000000000000000000000000000000
-        0002000000060000000A0000001200000018000000210000002A000000320000
-        00390000003900000037000000330000002C0000002800000020000000180000
-        0013000000100000000C00000008000000040000000200000000000000010000
-        00050000000C000000180000002800000043000000610000006F0000008D0000
-        009500000093000000900000008F000000720000005800000040000000320000
-        0027000000200000001900000011000000090000000400000001000000000000
-        00050000000F0000001C0000002F00000043000000570000005F000000805948
-        4CD766565AED000000950000008B00000072000000650000004D000000390000
-        002E000000260000001E000000150000000B0000000500000001000000010000
-        00000000000000000000000000080000000E00000021150F0F6086727BD4D9BD
-        CAFFDAB5C2FF483B3F9B000000400000004A0000004000000034000000290000
-        00210000001B000000160000000F000000080000000300000001000000000000
-        00001410152B171117311C151A3B3A2E386F736373C2AE9CB4FFAAA1BFFF8B7C
-        97FFB8A0B4FF907785DA00000014000000190000001C00000015000000110000
-        000D0000000A000000090000000400000001000000010000000000000000371F
-        3E7F50457FFF685C8CFF746896FF8980ACFF7A75A7FF5E5D94FF504F92FF5147
-        7AFF87748EFFB198B1FF211A1E35000000000000000300000002000000030000
-        0003000000020000000100000000000000000000000000000000000000003520
-        4DBA222376FF212073FF292A76FF353575FF232375FF2F3087FF393AA0FF3C3B
-        91FF5A4C74FF9686A3FF735F74BF000000000000000000000000000000000000
-        000000000000000000000000000000000000000000000000000000000000180B
-        4BBC00005BFF000066FF06066AFF0F0E6EFF171887FF1C1F9BFF1F1C72FF2827
-        87FF34348BFF554B73FF8D7D9EFF644455750000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000001909
-        49A7000062FF000064FF01026BFF040584FF02079EFF19106AD43E1C2E381612
-        5BF7181A91FF1A1A68FF49436DFF73678BFF6438474D00000000000000000000
-        000000000000000000000000000000000000000000000000000000000000200C
-        477A00006EFF000069FF000081FF00009CFF0D076ADC5421200B000000002712
-        449902088CFF0B0C7FFF0B0A51FF3F3B66FF564A75FF5C2B353E000000000000
-        0000000000000000000000000000000000000000000000000000000000003D18
-        3637000080FF0000ADFF0000A3FF100670AE0000000000000000000000004E1F
-        261A000070FF000196FF000069FF090845FF363464FF413868FF402B55440000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00001F0D66A30C0588DA3616514D000000000000000000000000000000000000
-        0000270F4584000096FF00008EFF000059FF0F0C41FF2D285EFF2D2A66FF3724
-        5073000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000090473E20000A8FF000086FF000051FF151143FF24225BFF201F
-        62FF261B53C73E1F3F1200000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000421B3540000093FF0000A8FF00007EFF010050FF141048FF1C19
-        5DFF151663FF1A1454FA3C1D3C3A000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000000000002710557E0000A5FF0000A5FF00007AFF000051FF0606
-        49FF13135FFF12156EFF0C0F5DFF441D30490000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000000000000000000000E0678B50000ABFF0000A4FF00007BFF0000
-        54FF00004AFF070854FF070C69FF120E54EC5724220200000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000592420010C0581D80000B0FF0000A2FF0000
-        7DFF00005CFF000057FF000075FF000067FF3316366900000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000005121251206038AEC0000ADFF0000
-        A0FF000084FF000066FF000078FF00008CFF2A114B7600000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000000000000000000000000000000000004D202C1F030190EE0000
-        A7FF00009CFF00008CFF000076FF000096FF3515515A00000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000371653160703
-        8DE40000A4FF000099FF00009BFF0000ADFF3F1A462100000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000002610
-        7108030191C00000A3FF0000BFFF14088BC90000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000016087B6C0A057DDE4B1F302D0000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000
-      }
-      OnClick = SBokPistolaClick
-      ShowHint = True
-      ParentShowHint = False
-    end
-    object NotePistola: TWTMemo
-      Left = 32
-      Height = 24
-      Top = 74
-      Width = 582
-      PopupMenu = PMfiltro
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 1
-      TypeFind = 'Containing'
-      ShowFocusColor = True
-      FocusColor = 12713983
-    end
-    object MATRICOLACANNA: TumEdit
-      Left = 556
-      Height = 24
-      Top = 28
-      Width = 126
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 2
-      TypeFind = 'Starting'
-      ColorDisabled = clWindow
-      ShowFocusColor = True
-      FocusColor = 12713983
-    end
-    object MATRICOLAPISTOLA: TumEdit
-      Tag = 34
-      Left = 400
-      Height = 24
-      Hint = 'fgg'
-      Top = 30
-      Width = 122
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 3
-      TypeFind = 'Starting'
-      ColorDisabled = clWindow
-      ShowFocusColor = True
-      FocusColor = 12713983
     end
   end
   object Panel2: TPanel
     Left = 0
-    Height = 308
-    Top = 366
+    Height = 341
+    Top = 309
     Width = 1115
-    Align = alTop
+    Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BevelInner = bvLowered
     BevelOuter = bvLowered
     BorderWidth = 1
-    ClientHeight = 308
+    ClientHeight = 341
     ClientWidth = 1115
-    TabOrder = 2
+    TabOrder = 1
     object DBGrid1: TDBGrid
       Left = 3
-      Height = 208
-      Top = 97
+      Height = 335
+      Top = 3
       Width = 1109
       Align = alClient
       Color = clWhite
@@ -547,597 +265,1161 @@ object FmRicercaSuSchede: TFmRicercaSuSchede
       TabOrder = 0
       TitleFont.Style = [fsBold]
     end
-    object Ptessere: TPanel
-      Left = 3
-      Height = 94
-      Top = 3
-      Width = 1109
-      Align = alTop
-      BevelInner = bvLowered
-      BevelOuter = bvLowered
-      Color = clMoneyGreen
-      ParentColor = False
-      TabOrder = 1
+  end
+  object PC: TPageControl
+    Left = 0
+    Height = 265
+    Top = 44
+    Width = 1115
+    ActivePage = TSArma
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 2
+    OnChange = PCChange
+    object TSArma: TTabSheet
+      Caption = 'Arma'
+      ClientHeight = 237
+      ClientWidth = 1107
+      object PanelPistola: TPanel
+        Left = 0
+        Height = 237
+        Top = 0
+        Width = 1107
+        Align = alClient
+        BevelInner = bvLowered
+        BevelOuter = bvLowered
+        BorderWidth = 1
+        ClientHeight = 237
+        ClientWidth = 1107
+        Color = 13170677
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Verdana'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 0
+        object Label4: TLabel
+          Left = 32
+          Height = 16
+          Top = 88
+          Width = 37
+          Caption = 'Note:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 556
+          Height = 16
+          Top = 28
+          Width = 112
+          Caption = 'Matricola Canna:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 412
+          Height = 16
+          Top = 28
+          Width = 114
+          Caption = 'Matricola Pistola:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object ksarma: TWTComboBox
+          Left = 33
+          Height = 24
+          Top = 48
+          Width = 356
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ItemHeight = 16
+          Items.Strings = (
+            ''
+            'P.A.B. MOD. 84BB CAL. 9 CORTO '
+            'P.A.B. MOD. 92FS CAL. 9 PARABELLUM'
+            'PX4 STORM FULL SIZE CAL. 9X19 MM '
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+            ''
+          )
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+          ShowFocusColor = True
+          FocusColor = 12713983
+        end
+        object Label1: TLabel
+          Left = 32
+          Height = 16
+          Top = 28
+          Width = 82
+          Caption = 'Tipo Pistola:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object SBokPistola: TSpeedButton
+          Left = 704
+          Height = 28
+          Hint = 'Conferma i Dati'
+          Top = 88
+          Width = 229
+          AutoSize = True
+          Caption = 'Conderma Ricerca Dati Pistola'
+          Flat = True
+          Glyph.Data = {
+            36090000424D3609000000000000360000002800000018000000180000000100
+            2000000000000009000064000000640000000000000000000000000000000000
+            00000000000000000002000000020000000400000006000000090000000B0000
+            000D0000000D0000000E0000000D0000000B0000000800000007000000050000
+            0003000000030000000200000001000000000000000000000000000000000000
+            0002000000060000000A0000001200000018000000210000002A000000320000
+            00390000003900000037000000330000002C0000002800000020000000180000
+            0013000000100000000C00000008000000040000000200000000000000010000
+            00050000000C000000180000002800000043000000610000006F0000008D0000
+            009500000093000000900000008F000000720000005800000040000000320000
+            0027000000200000001900000011000000090000000400000001000000000000
+            00050000000F0000001C0000002F00000043000000570000005F000000805948
+            4CD766565AED000000950000008B00000072000000650000004D000000390000
+            002E000000260000001E000000150000000B0000000500000001000000010000
+            00000000000000000000000000080000000E00000021150F0F6086727BD4D9BD
+            CAFFDAB5C2FF483B3F9B000000400000004A0000004000000034000000290000
+            00210000001B000000160000000F000000080000000300000001000000000000
+            00001410152B171117311C151A3B3A2E386F736373C2AE9CB4FFAAA1BFFF8B7C
+            97FFB8A0B4FF907785DA00000014000000190000001C00000015000000110000
+            000D0000000A000000090000000400000001000000010000000000000000371F
+            3E7F50457FFF685C8CFF746896FF8980ACFF7A75A7FF5E5D94FF504F92FF5147
+            7AFF87748EFFB198B1FF211A1E35000000000000000300000002000000030000
+            0003000000020000000100000000000000000000000000000000000000003520
+            4DBA222376FF212073FF292A76FF353575FF232375FF2F3087FF393AA0FF3C3B
+            91FF5A4C74FF9686A3FF735F74BF000000000000000000000000000000000000
+            000000000000000000000000000000000000000000000000000000000000180B
+            4BBC00005BFF000066FF06066AFF0F0E6EFF171887FF1C1F9BFF1F1C72FF2827
+            87FF34348BFF554B73FF8D7D9EFF644455750000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000001909
+            49A7000062FF000064FF01026BFF040584FF02079EFF19106AD43E1C2E381612
+            5BF7181A91FF1A1A68FF49436DFF73678BFF6438474D00000000000000000000
+            000000000000000000000000000000000000000000000000000000000000200C
+            477A00006EFF000069FF000081FF00009CFF0D076ADC5421200B000000002712
+            449902088CFF0B0C7FFF0B0A51FF3F3B66FF564A75FF5C2B353E000000000000
+            0000000000000000000000000000000000000000000000000000000000003D18
+            3637000080FF0000ADFF0000A3FF100670AE0000000000000000000000004E1F
+            261A000070FF000196FF000069FF090845FF363464FF413868FF402B55440000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00001F0D66A30C0588DA3616514D000000000000000000000000000000000000
+            0000270F4584000096FF00008EFF000059FF0F0C41FF2D285EFF2D2A66FF3724
+            5073000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000090473E20000A8FF000086FF000051FF151143FF24225BFF201F
+            62FF261B53C73E1F3F1200000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000421B3540000093FF0000A8FF00007EFF010050FF141048FF1C19
+            5DFF151663FF1A1454FA3C1D3C3A000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000002710557E0000A5FF0000A5FF00007AFF000051FF0606
+            49FF13135FFF12156EFF0C0F5DFF441D30490000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000000000000000000000E0678B50000ABFF0000A4FF00007BFF0000
+            54FF00004AFF070854FF070C69FF120E54EC5724220200000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000592420010C0581D80000B0FF0000A2FF0000
+            7DFF00005CFF000057FF000075FF000067FF3316366900000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000005121251206038AEC0000ADFF0000
+            A0FF000084FF000066FF000078FF00008CFF2A114B7600000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000000000000000000000000000004D202C1F030190EE0000
+            A7FF00009CFF00008CFF000076FF000096FF3515515A00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000371653160703
+            8DE40000A4FF000099FF00009BFF0000ADFF3F1A462100000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000002610
+            7108030191C00000A3FF0000BFFF14088BC90000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000016087B6C0A057DDE4B1F302D0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000
+          }
+          OnClick = SBokPistolaClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object NotePistola: TWTMemo
+          Left = 32
+          Height = 24
+          Top = 106
+          Width = 582
+          PopupMenu = PMfiltro
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+          TypeFind = 'Containing'
+          ShowFocusColor = True
+          FocusColor = 12713983
+        end
+        object MATRICOLACANNA: TumEdit
+          Left = 556
+          Height = 24
+          Top = 46
+          Width = 126
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 2
+          TypeFind = 'Starting'
+          ColorDisabled = clWindow
+          ShowFocusColor = True
+          FocusColor = 12713983
+        end
+        object MATRICOLAPISTOLA: TumEdit
+          Tag = 34
+          Left = 400
+          Height = 24
+          Hint = 'fgg'
+          Top = 48
+          Width = 122
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentFont = False
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 3
+          TypeFind = 'Starting'
+          ColorDisabled = clWindow
+          ShowFocusColor = True
+          FocusColor = 12713983
+        end
+      end
+    end
+    object TSfamiliari: TTabSheet
+      Caption = 'Familiari'
+      ClientHeight = 237
+      ClientWidth = 1107
+      object Panel1: TPanel
+        Left = 0
+        Height = 237
+        Top = 0
+        Width = 1107
+        Align = alClient
+        BevelInner = bvLowered
+        BevelOuter = bvLowered
+        ClientHeight = 237
+        ClientWidth = 1107
+        Color = 16762623
+        ParentColor = False
+        PopupMenu = PMfiltro
+        TabOrder = 0
+        object kscomune: TWTComboBoxSql
+          Left = 408
+          Height = 20
+          Top = 70
+          Width = 280
+          Sql.Strings = (
+            'SELECT * FROM COMUNI WHERE COMUNE STARTING  :COMUNE'
+            ''
+          )
+          Database = DM.DB
+          Transaction = DM.TR
+          LookField = 'idcomune'
+          LookDisplay = 'comune'
+          ShowFocusColor = True
+          FocusColor = 16244949
+          CharCase = ecUppercase
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+        end
+        object ksparentela: TWTComboBoxSql
+          Left = 88
+          Height = 20
+          Top = 36
+          Width = 230
+          Sql.Strings = (
+            'SELECT * FROM PARENTELE WHERE PARENTELA CONTAINING :PERENTELA'
+          )
+          Database = DM.DB
+          Transaction = DM.TR
+          LookField = 'idparentele'
+          LookDisplay = 'parentela'
+          ShowFocusColor = True
+          FocusColor = 16244949
+          CharCase = ecUppercase
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+        end
+        object Label6: TLabel
+          Left = 16
+          Height = 16
+          Top = 36
+          Width = 68
+          Caption = 'Parentela:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label7: TLabel
+          Left = 328
+          Height = 16
+          Top = 36
+          Width = 66
+          Caption = 'Cognome:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label8: TLabel
+          Left = 701
+          Height = 16
+          Top = 36
+          Width = 42
+          Caption = 'Nome:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object cognome: TumEdit
+          Tag = 34
+          Left = 408
+          Height = 24
+          Hint = 'fgg'
+          Top = 32
+          Width = 275
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentFont = False
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 1
+          TypeFind = 'Starting'
+          ColorDisabled = clWindow
+          ShowFocusColor = True
+          FocusColor = 16244949
+        end
+        object nome: TumEdit
+          Tag = 34
+          Left = 749
+          Height = 24
+          Hint = 'fgg'
+          Top = 33
+          Width = 332
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentFont = False
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 2
+          TypeFind = 'Starting'
+          ColorDisabled = clWindow
+          ShowFocusColor = True
+          FocusColor = 16244949
+        end
+        object Label9: TLabel
+          Left = 16
+          Height = 16
+          Top = 74
+          Width = 65
+          Caption = 'Nato/A Il:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label10: TLabel
+          Left = 279
+          Height = 16
+          Top = 74
+          Width = 115
+          Caption = 'Luogo di Nascita:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label11: TLabel
+          Left = 16
+          Height = 16
+          Top = 117
+          Width = 113
+          Caption = 'Data Matrimonio:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label12: TLabel
+          Left = 280
+          Height = 16
+          Top = 117
+          Width = 80
+          Caption = 'Data Morte:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object SBokPistola1: TSpeedButton
+          Left = 760
+          Height = 28
+          Hint = 'Conferma i Dati'
+          Top = 144
+          Width = 214
+          Caption = 'Conderma Ricerca Dati Parentela'
+          Flat = True
+          Glyph.Data = {
+            36090000424D3609000000000000360000002800000018000000180000000100
+            2000000000000009000064000000640000000000000000000000000000000000
+            00000000000000000002000000020000000400000006000000090000000B0000
+            000D0000000D0000000E0000000D0000000B0000000800000007000000050000
+            0003000000030000000200000001000000000000000000000000000000000000
+            0002000000060000000A0000001200000018000000210000002A000000320000
+            00390000003900000037000000330000002C0000002800000020000000180000
+            0013000000100000000C00000008000000040000000200000000000000010000
+            00050000000C000000180000002800000043000000610000006F0000008D0000
+            009500000093000000900000008F000000720000005800000040000000320000
+            0027000000200000001900000011000000090000000400000001000000000000
+            00050000000F0000001C0000002F00000043000000570000005F000000805948
+            4CD766565AED000000950000008B00000072000000650000004D000000390000
+            002E000000260000001E000000150000000B0000000500000001000000010000
+            00000000000000000000000000080000000E00000021150F0F6086727BD4D9BD
+            CAFFDAB5C2FF483B3F9B000000400000004A0000004000000034000000290000
+            00210000001B000000160000000F000000080000000300000001000000000000
+            00001410152B171117311C151A3B3A2E386F736373C2AE9CB4FFAAA1BFFF8B7C
+            97FFB8A0B4FF907785DA00000014000000190000001C00000015000000110000
+            000D0000000A000000090000000400000001000000010000000000000000371F
+            3E7F50457FFF685C8CFF746896FF8980ACFF7A75A7FF5E5D94FF504F92FF5147
+            7AFF87748EFFB198B1FF211A1E35000000000000000300000002000000030000
+            0003000000020000000100000000000000000000000000000000000000003520
+            4DBA222376FF212073FF292A76FF353575FF232375FF2F3087FF393AA0FF3C3B
+            91FF5A4C74FF9686A3FF735F74BF000000000000000000000000000000000000
+            000000000000000000000000000000000000000000000000000000000000180B
+            4BBC00005BFF000066FF06066AFF0F0E6EFF171887FF1C1F9BFF1F1C72FF2827
+            87FF34348BFF554B73FF8D7D9EFF644455750000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000001909
+            49A7000062FF000064FF01026BFF040584FF02079EFF19106AD43E1C2E381612
+            5BF7181A91FF1A1A68FF49436DFF73678BFF6438474D00000000000000000000
+            000000000000000000000000000000000000000000000000000000000000200C
+            477A00006EFF000069FF000081FF00009CFF0D076ADC5421200B000000002712
+            449902088CFF0B0C7FFF0B0A51FF3F3B66FF564A75FF5C2B353E000000000000
+            0000000000000000000000000000000000000000000000000000000000003D18
+            3637000080FF0000ADFF0000A3FF100670AE0000000000000000000000004E1F
+            261A000070FF000196FF000069FF090845FF363464FF413868FF402B55440000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00001F0D66A30C0588DA3616514D000000000000000000000000000000000000
+            0000270F4584000096FF00008EFF000059FF0F0C41FF2D285EFF2D2A66FF3724
+            5073000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000090473E20000A8FF000086FF000051FF151143FF24225BFF201F
+            62FF261B53C73E1F3F1200000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000421B3540000093FF0000A8FF00007EFF010050FF141048FF1C19
+            5DFF151663FF1A1454FA3C1D3C3A000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000002710557E0000A5FF0000A5FF00007AFF000051FF0606
+            49FF13135FFF12156EFF0C0F5DFF441D30490000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000000000000000000000E0678B50000ABFF0000A4FF00007BFF0000
+            54FF00004AFF070854FF070C69FF120E54EC5724220200000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000592420010C0581D80000B0FF0000A2FF0000
+            7DFF00005CFF000057FF000075FF000067FF3316366900000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000005121251206038AEC0000ADFF0000
+            A0FF000084FF000066FF000078FF00008CFF2A114B7600000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000000000000000000000000000004D202C1F030190EE0000
+            A7FF00009CFF00008CFF000076FF000096FF3515515A00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000371653160703
+            8DE40000A4FF000099FF00009BFF0000ADFF3F1A462100000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000002610
+            7108030191C00000A3FF0000BFFF14088BC90000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000016087B6C0A057DDE4B1F302D0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000
+          }
+          OnClick = SBokParentelaClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object nato: TWDateEdit
+          Cursor = crHandPoint
+          Left = 89
+          Height = 23
+          Top = 69
+          Width = 111
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doDMY
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 10
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 3
+          Text = '  /  /    '
+          TypeFind = '='
+        end
+        object dmatrimonio: TWDateEdit
+          Cursor = crHandPoint
+          Left = 144
+          Height = 23
+          Top = 110
+          Width = 119
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doDMY
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 10
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 5
+          Text = '  /  /    '
+          TypeFind = '='
+        end
+        object dmorte: TWDateEdit
+          Cursor = crHandPoint
+          Left = 375
+          Height = 23
+          Top = 110
+          Width = 119
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doDMY
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 10
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 6
+          Text = '  /  /    '
+          TypeFind = '='
+        end
+        object Label13: TLabel
+          Left = 16
+          Height = 16
+          Top = 153
+          Width = 31
+          Caption = 'Note'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object NoteParentela: TWTMemo
+          Left = 88
+          Height = 24
+          Top = 148
+          Width = 582
+          PopupMenu = PMfiltro
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 7
+          TypeFind = 'Containing'
+          ShowFocusColor = True
+          FocusColor = 16244949
+        end
+      end
+    end
+    object TSAltreFA: TTabSheet
+      Caption = 'Altre FFAA'
+      ClientHeight = 237
+      ClientWidth = 1107
+      object Panel3: TPanel
+        Left = 0
+        Height = 237
+        Top = 0
+        Width = 1107
+        Align = alClient
+        BevelInner = bvLowered
+        BevelOuter = bvLowered
+        ClientHeight = 237
+        ClientWidth = 1107
+        Color = 13170677
+        ParentColor = False
+        TabOrder = 0
+        object KSIDFFAA: TWTComboBoxSql
+          Left = 151
+          Height = 20
+          Top = 47
+          Width = 424
+          Sql.Strings = (
+            'SELECT * FROM ALTREFFAA WHERE DESCRIZIONEFFAA CONTAINING :DESCRIZIONEFFAA'
+          )
+          Database = DM.DB
+          Transaction = DM.TR
+          LookField = 'IDFFAA'
+          LookDisplay = 'DESCRIZIONEFFAA'
+          ShowFocusColor = True
+          FocusColor = 16244949
+          CharCase = ecUppercase
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+        end
+        object Label14: TLabel
+          Left = 47
+          Height = 16
+          Top = 51
+          Width = 88
+          Caption = 'Forza Armata'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label15: TLabel
+          Left = 47
+          Height = 16
+          Top = 95
+          Width = 26
+          Caption = 'Dal:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object dal: TWDateEdit
+          Cursor = crHandPoint
+          Left = 151
+          Height = 23
+          Top = 91
+          Width = 111
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doDMY
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 10
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 1
+          Text = '  /  /    '
+          TypeFind = '='
+        end
+        object al: TWDateEdit
+          Cursor = crHandPoint
+          Left = 335
+          Height = 23
+          Top = 91
+          Width = 111
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doDMY
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 10
+          ParentShowHint = False
+          PopupMenu = PMfiltro
+          ShowHint = True
+          TabOrder = 2
+          Text = '  /  /    '
+          TypeFind = '='
+        end
+        object Label16: TLabel
+          Left = 287
+          Height = 16
+          Top = 95
+          Width = 18
+          Caption = 'Al:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object SBokForzeArmate: TSpeedButton
+          Left = 576
+          Height = 28
+          Hint = 'Conferma i Dati'
+          Top = 112
+          Width = 214
+          Caption = 'Conferma Ricerca Forze Armate'
+          Flat = True
+          Glyph.Data = {
+            36090000424D3609000000000000360000002800000018000000180000000100
+            2000000000000009000064000000640000000000000000000000000000000000
+            00000000000000000002000000020000000400000006000000090000000B0000
+            000D0000000D0000000E0000000D0000000B0000000800000007000000050000
+            0003000000030000000200000001000000000000000000000000000000000000
+            0002000000060000000A0000001200000018000000210000002A000000320000
+            00390000003900000037000000330000002C0000002800000020000000180000
+            0013000000100000000C00000008000000040000000200000000000000010000
+            00050000000C000000180000002800000043000000610000006F0000008D0000
+            009500000093000000900000008F000000720000005800000040000000320000
+            0027000000200000001900000011000000090000000400000001000000000000
+            00050000000F0000001C0000002F00000043000000570000005F000000805948
+            4CD766565AED000000950000008B00000072000000650000004D000000390000
+            002E000000260000001E000000150000000B0000000500000001000000010000
+            00000000000000000000000000080000000E00000021150F0F6086727BD4D9BD
+            CAFFDAB5C2FF483B3F9B000000400000004A0000004000000034000000290000
+            00210000001B000000160000000F000000080000000300000001000000000000
+            00001410152B171117311C151A3B3A2E386F736373C2AE9CB4FFAAA1BFFF8B7C
+            97FFB8A0B4FF907785DA00000014000000190000001C00000015000000110000
+            000D0000000A000000090000000400000001000000010000000000000000371F
+            3E7F50457FFF685C8CFF746896FF8980ACFF7A75A7FF5E5D94FF504F92FF5147
+            7AFF87748EFFB198B1FF211A1E35000000000000000300000002000000030000
+            0003000000020000000100000000000000000000000000000000000000003520
+            4DBA222376FF212073FF292A76FF353575FF232375FF2F3087FF393AA0FF3C3B
+            91FF5A4C74FF9686A3FF735F74BF000000000000000000000000000000000000
+            000000000000000000000000000000000000000000000000000000000000180B
+            4BBC00005BFF000066FF06066AFF0F0E6EFF171887FF1C1F9BFF1F1C72FF2827
+            87FF34348BFF554B73FF8D7D9EFF644455750000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000001909
+            49A7000062FF000064FF01026BFF040584FF02079EFF19106AD43E1C2E381612
+            5BF7181A91FF1A1A68FF49436DFF73678BFF6438474D00000000000000000000
+            000000000000000000000000000000000000000000000000000000000000200C
+            477A00006EFF000069FF000081FF00009CFF0D076ADC5421200B000000002712
+            449902088CFF0B0C7FFF0B0A51FF3F3B66FF564A75FF5C2B353E000000000000
+            0000000000000000000000000000000000000000000000000000000000003D18
+            3637000080FF0000ADFF0000A3FF100670AE0000000000000000000000004E1F
+            261A000070FF000196FF000069FF090845FF363464FF413868FF402B55440000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00001F0D66A30C0588DA3616514D000000000000000000000000000000000000
+            0000270F4584000096FF00008EFF000059FF0F0C41FF2D285EFF2D2A66FF3724
+            5073000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000090473E20000A8FF000086FF000051FF151143FF24225BFF201F
+            62FF261B53C73E1F3F1200000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000421B3540000093FF0000A8FF00007EFF010050FF141048FF1C19
+            5DFF151663FF1A1454FA3C1D3C3A000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000002710557E0000A5FF0000A5FF00007AFF000051FF0606
+            49FF13135FFF12156EFF0C0F5DFF441D30490000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000000000000000000000E0678B50000ABFF0000A4FF00007BFF0000
+            54FF00004AFF070854FF070C69FF120E54EC5724220200000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000592420010C0581D80000B0FF0000A2FF0000
+            7DFF00005CFF000057FF000075FF000067FF3316366900000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000005121251206038AEC0000ADFF0000
+            A0FF000084FF000066FF000078FF00008CFF2A114B7600000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000000000000000000000000000004D202C1F030190EE0000
+            A7FF00009CFF00008CFF000076FF000096FF3515515A00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000371653160703
+            8DE40000A4FF000099FF00009BFF0000ADFF3F1A462100000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000002610
+            7108030191C00000A3FF0000BFFF14088BC90000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000016087B6C0A057DDE4B1F302D0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000
+          }
+          OnClick = SBokForzeArmateClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+      end
+    end
+    object TSpatenti: TTabSheet
+      Caption = 'Patenti'
+    end
+    object TStessere: TTabSheet
+      Caption = 'Tessere'
+    end
+    object TSricompense: TTabSheet
+      Caption = 'Ricompense'
+      ClientHeight = 237
+      ClientWidth = 1107
+      object Panel4: TPanel
+        Left = 0
+        Height = 237
+        Top = 0
+        Width = 1107
+        Align = alClient
+        BevelInner = bvLowered
+        BevelOuter = bvLowered
+        ClientHeight = 237
+        ClientWidth = 1107
+        Color = 14543103
+        ParentColor = False
+        TabOrder = 0
+        object SBokRicompense: TSpeedButton
+          Left = 608
+          Height = 28
+          Hint = 'Conferma i Dati'
+          Top = 32
+          Width = 129
+          AutoSize = True
+          Caption = 'Conderma Ricerca'
+          Flat = True
+          Glyph.Data = {
+            36090000424D3609000000000000360000002800000018000000180000000100
+            2000000000000009000064000000640000000000000000000000000000000000
+            00000000000000000002000000020000000400000006000000090000000B0000
+            000D0000000D0000000E0000000D0000000B0000000800000007000000050000
+            0003000000030000000200000001000000000000000000000000000000000000
+            0002000000060000000A0000001200000018000000210000002A000000320000
+            00390000003900000037000000330000002C0000002800000020000000180000
+            0013000000100000000C00000008000000040000000200000000000000010000
+            00050000000C000000180000002800000043000000610000006F0000008D0000
+            009500000093000000900000008F000000720000005800000040000000320000
+            0027000000200000001900000011000000090000000400000001000000000000
+            00050000000F0000001C0000002F00000043000000570000005F000000805948
+            4CD766565AED000000950000008B00000072000000650000004D000000390000
+            002E000000260000001E000000150000000B0000000500000001000000010000
+            00000000000000000000000000080000000E00000021150F0F6086727BD4D9BD
+            CAFFDAB5C2FF483B3F9B000000400000004A0000004000000034000000290000
+            00210000001B000000160000000F000000080000000300000001000000000000
+            00001410152B171117311C151A3B3A2E386F736373C2AE9CB4FFAAA1BFFF8B7C
+            97FFB8A0B4FF907785DA00000014000000190000001C00000015000000110000
+            000D0000000A000000090000000400000001000000010000000000000000371F
+            3E7F50457FFF685C8CFF746896FF8980ACFF7A75A7FF5E5D94FF504F92FF5147
+            7AFF87748EFFB198B1FF211A1E35000000000000000300000002000000030000
+            0003000000020000000100000000000000000000000000000000000000003520
+            4DBA222376FF212073FF292A76FF353575FF232375FF2F3087FF393AA0FF3C3B
+            91FF5A4C74FF9686A3FF735F74BF000000000000000000000000000000000000
+            000000000000000000000000000000000000000000000000000000000000180B
+            4BBC00005BFF000066FF06066AFF0F0E6EFF171887FF1C1F9BFF1F1C72FF2827
+            87FF34348BFF554B73FF8D7D9EFF644455750000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000001909
+            49A7000062FF000064FF01026BFF040584FF02079EFF19106AD43E1C2E381612
+            5BF7181A91FF1A1A68FF49436DFF73678BFF6438474D00000000000000000000
+            000000000000000000000000000000000000000000000000000000000000200C
+            477A00006EFF000069FF000081FF00009CFF0D076ADC5421200B000000002712
+            449902088CFF0B0C7FFF0B0A51FF3F3B66FF564A75FF5C2B353E000000000000
+            0000000000000000000000000000000000000000000000000000000000003D18
+            3637000080FF0000ADFF0000A3FF100670AE0000000000000000000000004E1F
+            261A000070FF000196FF000069FF090845FF363464FF413868FF402B55440000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00001F0D66A30C0588DA3616514D000000000000000000000000000000000000
+            0000270F4584000096FF00008EFF000059FF0F0C41FF2D285EFF2D2A66FF3724
+            5073000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000090473E20000A8FF000086FF000051FF151143FF24225BFF201F
+            62FF261B53C73E1F3F1200000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000421B3540000093FF0000A8FF00007EFF010050FF141048FF1C19
+            5DFF151663FF1A1454FA3C1D3C3A000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000002710557E0000A5FF0000A5FF00007AFF000051FF0606
+            49FF13135FFF12156EFF0C0F5DFF441D30490000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000000000000000000000E0678B50000ABFF0000A4FF00007BFF0000
+            54FF00004AFF070854FF070C69FF120E54EC5724220200000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000592420010C0581D80000B0FF0000A2FF0000
+            7DFF00005CFF000057FF000075FF000067FF3316366900000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000005121251206038AEC0000ADFF0000
+            A0FF000084FF000066FF000078FF00008CFF2A114B7600000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            000000000000000000000000000000000000000000004D202C1F030190EE0000
+            A7FF00009CFF00008CFF000076FF000096FF3515515A00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000371653160703
+            8DE40000A4FF000099FF00009BFF0000ADFF3F1A462100000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000002610
+            7108030191C00000A3FF0000BFFF14088BC90000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000016087B6C0A057DDE4B1F302D0000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000
+          }
+          OnClick = SBokRicompenseClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object KSricompensa: TWTComboBoxSql
+          Left = 56
+          Height = 20
+          Top = 80
+          Width = 304
+          Sql.Strings = (
+            'SELECT IDRICOMPENSA, RICOMPENSA'
+            'FROM RICOMPENSE WHERE  RICOMPENSA  CONTAINING :RICOMPENSA '
+            'ORDER BY RICOMPENSA'
+          )
+          Database = DM.DB
+          Transaction = DM.TR
+          LookField = 'IDRICOMPENSA'
+          LookDisplay = 'RICOMPENSA'
+          ShowFocusColor = True
+          FocusColor = 16244949
+          CharCase = ecNormal
+          TabOrder = 0
+        end
+        object DataRicompensaDal: TWDateEdit
+          Cursor = crHandPoint
+          Left = 152
+          Height = 23
+          Top = 144
+          Width = 144
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doDMY
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 10
+          TabOrder = 1
+          Text = '  /  /    '
+          TypeFind = '='
+        end
+        object Label18: TLabel
+          Left = 56
+          Height = 16
+          Top = 56
+          Width = 110
+          Caption = 'Tipo Ricompensa'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label19: TLabel
+          Left = 240
+          Height = 16
+          Top = 112
+          Width = 113
+          Caption = 'Data Ricompensa'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label20: TLabel
+          Left = 432
+          Height = 16
+          Top = 56
+          Width = 88
+          Caption = 'Nr. Determina'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object determina: TumEdit
+          Left = 407
+          Height = 23
+          Top = 81
+          Width = 136
+          TabOrder = 2
+          TypeFind = 'Starting'
+          ColorDisabled = clWindow
+          ShowFocusColor = True
+          FocusColor = 16244949
+        end
+        object DataRicompensaAl: TWDateEdit
+          Cursor = crHandPoint
+          Left = 352
+          Height = 23
+          Top = 144
+          Width = 144
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doDMY
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 10
+          TabOrder = 3
+          Text = '  /  /    '
+          TypeFind = '='
+        end
+        object Label21: TLabel
+          Left = 120
+          Height = 16
+          Top = 149
+          Width = 26
+          Caption = 'Dal:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label22: TLabel
+          Left = 322
+          Height = 16
+          Top = 149
+          Width = 18
+          Caption = 'Al:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+      end
     end
   end
-  object Panel1: TPanel
-    Left = 0
-    Height = 137
-    Top = 151
-    Width = 1115
-    Align = alTop
-    BevelInner = bvLowered
-    BevelOuter = bvLowered
-    ClientHeight = 137
-    ClientWidth = 1115
-    Color = 16762623
-    ParentColor = False
-    PopupMenu = PMfiltro
-    TabOrder = 3
-    object kscomune: TWTComboBoxSql
-      Left = 408
-      Height = 20
-      Top = 48
-      Width = 280
-      Sql.Strings = (
-        'SELECT * FROM COMUNI WHERE COMUNE STARTING  :COMUNE'
-        ''
-      )
-      Database = DM.DB
-      Transaction = DM.TR
-      LookField = 'idcomune'
-      LookDisplay = 'comune'
-      ShowFocusColor = True
-      FocusColor = 16244949
-      CharCase = ecUppercase
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 4
-    end
-    object ksparentela: TWTComboBoxSql
-      Left = 88
-      Height = 20
-      Top = 20
-      Width = 230
-      Sql.Strings = (
-        'SELECT * FROM PARENTELE WHERE PARENTELA CONTAINING :PERENTELA'
-      )
-      Database = DM.DB
-      Transaction = DM.TR
-      LookField = 'idparentele'
-      LookDisplay = 'parentela'
-      ShowFocusColor = True
-      FocusColor = 16244949
-      CharCase = ecUppercase
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 0
-    end
-    object Label6: TLabel
-      Left = 16
-      Height = 16
-      Top = 20
-      Width = 68
-      Caption = 'Parentela:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label7: TLabel
-      Left = 328
-      Height = 16
-      Top = 20
-      Width = 66
-      Caption = 'Cognome:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label8: TLabel
-      Left = 701
-      Height = 16
-      Top = 20
-      Width = 42
-      Caption = 'Nome:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object cognome: TumEdit
-      Tag = 34
-      Left = 408
-      Height = 24
-      Hint = 'fgg'
-      Top = 16
-      Width = 275
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 1
-      TypeFind = 'Starting'
-      ColorDisabled = clWindow
-      ShowFocusColor = True
-      FocusColor = 16244949
-    end
-    object nome: TumEdit
-      Tag = 34
-      Left = 749
-      Height = 24
-      Hint = 'fgg'
-      Top = 17
-      Width = 332
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 2
-      TypeFind = 'Starting'
-      ColorDisabled = clWindow
-      ShowFocusColor = True
-      FocusColor = 16244949
-    end
-    object Label9: TLabel
-      Left = 16
-      Height = 16
-      Top = 52
-      Width = 65
-      Caption = 'Nato/A Il:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label10: TLabel
-      Left = 279
-      Height = 16
-      Top = 52
-      Width = 115
-      Caption = 'Luogo di Nascita:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label11: TLabel
-      Left = 16
-      Height = 16
-      Top = 82
-      Width = 113
-      Caption = 'Data Matrimonio:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label12: TLabel
-      Left = 280
-      Height = 16
-      Top = 82
-      Width = 80
-      Caption = 'Data Morte:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object SBokPistola1: TSpeedButton
-      Left = 824
-      Height = 28
-      Hint = 'Conferma i Dati'
-      Top = 72
-      Width = 214
-      Caption = 'Conderma Ricerca Dati Parentela'
-      Flat = True
-      Glyph.Data = {
-        36090000424D3609000000000000360000002800000018000000180000000100
-        2000000000000009000064000000640000000000000000000000000000000000
-        00000000000000000002000000020000000400000006000000090000000B0000
-        000D0000000D0000000E0000000D0000000B0000000800000007000000050000
-        0003000000030000000200000001000000000000000000000000000000000000
-        0002000000060000000A0000001200000018000000210000002A000000320000
-        00390000003900000037000000330000002C0000002800000020000000180000
-        0013000000100000000C00000008000000040000000200000000000000010000
-        00050000000C000000180000002800000043000000610000006F0000008D0000
-        009500000093000000900000008F000000720000005800000040000000320000
-        0027000000200000001900000011000000090000000400000001000000000000
-        00050000000F0000001C0000002F00000043000000570000005F000000805948
-        4CD766565AED000000950000008B00000072000000650000004D000000390000
-        002E000000260000001E000000150000000B0000000500000001000000010000
-        00000000000000000000000000080000000E00000021150F0F6086727BD4D9BD
-        CAFFDAB5C2FF483B3F9B000000400000004A0000004000000034000000290000
-        00210000001B000000160000000F000000080000000300000001000000000000
-        00001410152B171117311C151A3B3A2E386F736373C2AE9CB4FFAAA1BFFF8B7C
-        97FFB8A0B4FF907785DA00000014000000190000001C00000015000000110000
-        000D0000000A000000090000000400000001000000010000000000000000371F
-        3E7F50457FFF685C8CFF746896FF8980ACFF7A75A7FF5E5D94FF504F92FF5147
-        7AFF87748EFFB198B1FF211A1E35000000000000000300000002000000030000
-        0003000000020000000100000000000000000000000000000000000000003520
-        4DBA222376FF212073FF292A76FF353575FF232375FF2F3087FF393AA0FF3C3B
-        91FF5A4C74FF9686A3FF735F74BF000000000000000000000000000000000000
-        000000000000000000000000000000000000000000000000000000000000180B
-        4BBC00005BFF000066FF06066AFF0F0E6EFF171887FF1C1F9BFF1F1C72FF2827
-        87FF34348BFF554B73FF8D7D9EFF644455750000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000001909
-        49A7000062FF000064FF01026BFF040584FF02079EFF19106AD43E1C2E381612
-        5BF7181A91FF1A1A68FF49436DFF73678BFF6438474D00000000000000000000
-        000000000000000000000000000000000000000000000000000000000000200C
-        477A00006EFF000069FF000081FF00009CFF0D076ADC5421200B000000002712
-        449902088CFF0B0C7FFF0B0A51FF3F3B66FF564A75FF5C2B353E000000000000
-        0000000000000000000000000000000000000000000000000000000000003D18
-        3637000080FF0000ADFF0000A3FF100670AE0000000000000000000000004E1F
-        261A000070FF000196FF000069FF090845FF363464FF413868FF402B55440000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00001F0D66A30C0588DA3616514D000000000000000000000000000000000000
-        0000270F4584000096FF00008EFF000059FF0F0C41FF2D285EFF2D2A66FF3724
-        5073000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000090473E20000A8FF000086FF000051FF151143FF24225BFF201F
-        62FF261B53C73E1F3F1200000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000421B3540000093FF0000A8FF00007EFF010050FF141048FF1C19
-        5DFF151663FF1A1454FA3C1D3C3A000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000000000002710557E0000A5FF0000A5FF00007AFF000051FF0606
-        49FF13135FFF12156EFF0C0F5DFF441D30490000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000000000000000000000E0678B50000ABFF0000A4FF00007BFF0000
-        54FF00004AFF070854FF070C69FF120E54EC5724220200000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000592420010C0581D80000B0FF0000A2FF0000
-        7DFF00005CFF000057FF000075FF000067FF3316366900000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000005121251206038AEC0000ADFF0000
-        A0FF000084FF000066FF000078FF00008CFF2A114B7600000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000000000000000000000000000000000004D202C1F030190EE0000
-        A7FF00009CFF00008CFF000076FF000096FF3515515A00000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000371653160703
-        8DE40000A4FF000099FF00009BFF0000ADFF3F1A462100000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000002610
-        7108030191C00000A3FF0000BFFF14088BC90000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000016087B6C0A057DDE4B1F302D0000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000
-      }
-      OnClick = SBokParentelaClick
-      ShowHint = True
-      ParentShowHint = False
-    end
-    object nato: TWDateEdit
-      Cursor = crHandPoint
-      Left = 89
-      Height = 23
-      Top = 47
-      Width = 111
-      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
-      DateOrder = doDMY
-      ButtonWidth = 23
-      NumGlyphs = 1
-      MaxLength = 10
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 3
-      Text = '  /  /    '
-      TypeFind = '='
-    end
-    object dmatrimonio: TWDateEdit
-      Cursor = crHandPoint
-      Left = 144
-      Height = 23
-      Top = 75
-      Width = 119
-      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
-      DateOrder = doDMY
-      ButtonWidth = 23
-      NumGlyphs = 1
-      MaxLength = 10
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 5
-      Text = '  /  /    '
-      TypeFind = '='
-    end
-    object dmorte: TWDateEdit
-      Cursor = crHandPoint
-      Left = 375
-      Height = 23
-      Top = 75
-      Width = 119
-      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
-      DateOrder = doDMY
-      ButtonWidth = 23
-      NumGlyphs = 1
-      MaxLength = 10
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 6
-      Text = '  /  /    '
-      TypeFind = '='
-    end
-    object Label13: TLabel
-      Left = 16
-      Height = 16
-      Top = 109
-      Width = 31
-      Caption = 'Note'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object NoteParentela: TWTMemo
-      Left = 88
-      Height = 24
-      Top = 104
-      Width = 582
-      PopupMenu = PMfiltro
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 7
-      TypeFind = 'Containing'
-      ShowFocusColor = True
-      FocusColor = 16244949
-    end
-  end
-  object Panel3: TPanel
-    Left = 0
-    Height = 78
-    Top = 288
-    Width = 1115
-    Align = alTop
-    BevelInner = bvLowered
-    BevelOuter = bvLowered
-    ClientHeight = 78
-    ClientWidth = 1115
-    Color = 13170677
-    ParentColor = False
-    TabOrder = 4
-    object KSIDFFAA: TWTComboBoxSql
-      Left = 120
-      Height = 20
-      Top = 12
-      Width = 424
-      Sql.Strings = (
-        'SELECT * FROM ALTREFFAA WHERE DESCRIZIONEFFAA CONTAINING :DESCRIZIONEFFAA'
-      )
-      Database = DM.DB
-      Transaction = DM.TR
-      LookField = 'IDFFAA'
-      LookDisplay = 'DESCRIZIONEFFAA'
-      ShowFocusColor = True
-      FocusColor = 16244949
-      CharCase = ecUppercase
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 0
-    end
-    object Label14: TLabel
-      Left = 16
-      Height = 16
-      Top = 16
-      Width = 88
-      Caption = 'Forza Armata'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label15: TLabel
-      Left = 16
-      Height = 16
-      Top = 44
-      Width = 26
-      Caption = 'Dal:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object dal: TWDateEdit
-      Cursor = crHandPoint
-      Left = 120
-      Height = 23
-      Top = 40
-      Width = 111
-      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
-      DateOrder = doDMY
-      ButtonWidth = 23
-      NumGlyphs = 1
-      MaxLength = 10
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 1
-      Text = '  /  /    '
-      TypeFind = '='
-    end
-    object al: TWDateEdit
-      Cursor = crHandPoint
-      Left = 304
-      Height = 23
-      Top = 40
-      Width = 111
-      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
-      DateOrder = doDMY
-      ButtonWidth = 23
-      NumGlyphs = 1
-      MaxLength = 10
-      ParentShowHint = False
-      PopupMenu = PMfiltro
-      ShowHint = True
-      TabOrder = 2
-      Text = '  /  /    '
-      TypeFind = '='
-    end
-    object Label16: TLabel
-      Left = 256
-      Height = 16
-      Top = 44
-      Width = 18
-      Caption = 'Al:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clNavy
-      Font.Height = -13
-      Font.Name = 'Verdana'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentColor = False
-      ParentFont = False
-    end
-    object SBokForzeArmate: TSpeedButton
-      Left = 824
-      Height = 28
-      Hint = 'Conferma i Dati'
-      Top = 27
-      Width = 214
-      Caption = 'Conferma Ricerca Forze Armate'
-      Flat = True
-      Glyph.Data = {
-        36090000424D3609000000000000360000002800000018000000180000000100
-        2000000000000009000064000000640000000000000000000000000000000000
-        00000000000000000002000000020000000400000006000000090000000B0000
-        000D0000000D0000000E0000000D0000000B0000000800000007000000050000
-        0003000000030000000200000001000000000000000000000000000000000000
-        0002000000060000000A0000001200000018000000210000002A000000320000
-        00390000003900000037000000330000002C0000002800000020000000180000
-        0013000000100000000C00000008000000040000000200000000000000010000
-        00050000000C000000180000002800000043000000610000006F0000008D0000
-        009500000093000000900000008F000000720000005800000040000000320000
-        0027000000200000001900000011000000090000000400000001000000000000
-        00050000000F0000001C0000002F00000043000000570000005F000000805948
-        4CD766565AED000000950000008B00000072000000650000004D000000390000
-        002E000000260000001E000000150000000B0000000500000001000000010000
-        00000000000000000000000000080000000E00000021150F0F6086727BD4D9BD
-        CAFFDAB5C2FF483B3F9B000000400000004A0000004000000034000000290000
-        00210000001B000000160000000F000000080000000300000001000000000000
-        00001410152B171117311C151A3B3A2E386F736373C2AE9CB4FFAAA1BFFF8B7C
-        97FFB8A0B4FF907785DA00000014000000190000001C00000015000000110000
-        000D0000000A000000090000000400000001000000010000000000000000371F
-        3E7F50457FFF685C8CFF746896FF8980ACFF7A75A7FF5E5D94FF504F92FF5147
-        7AFF87748EFFB198B1FF211A1E35000000000000000300000002000000030000
-        0003000000020000000100000000000000000000000000000000000000003520
-        4DBA222376FF212073FF292A76FF353575FF232375FF2F3087FF393AA0FF3C3B
-        91FF5A4C74FF9686A3FF735F74BF000000000000000000000000000000000000
-        000000000000000000000000000000000000000000000000000000000000180B
-        4BBC00005BFF000066FF06066AFF0F0E6EFF171887FF1C1F9BFF1F1C72FF2827
-        87FF34348BFF554B73FF8D7D9EFF644455750000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000001909
-        49A7000062FF000064FF01026BFF040584FF02079EFF19106AD43E1C2E381612
-        5BF7181A91FF1A1A68FF49436DFF73678BFF6438474D00000000000000000000
-        000000000000000000000000000000000000000000000000000000000000200C
-        477A00006EFF000069FF000081FF00009CFF0D076ADC5421200B000000002712
-        449902088CFF0B0C7FFF0B0A51FF3F3B66FF564A75FF5C2B353E000000000000
-        0000000000000000000000000000000000000000000000000000000000003D18
-        3637000080FF0000ADFF0000A3FF100670AE0000000000000000000000004E1F
-        261A000070FF000196FF000069FF090845FF363464FF413868FF402B55440000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00001F0D66A30C0588DA3616514D000000000000000000000000000000000000
-        0000270F4584000096FF00008EFF000059FF0F0C41FF2D285EFF2D2A66FF3724
-        5073000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000090473E20000A8FF000086FF000051FF151143FF24225BFF201F
-        62FF261B53C73E1F3F1200000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000421B3540000093FF0000A8FF00007EFF010050FF141048FF1C19
-        5DFF151663FF1A1454FA3C1D3C3A000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000000000002710557E0000A5FF0000A5FF00007AFF000051FF0606
-        49FF13135FFF12156EFF0C0F5DFF441D30490000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000000000000000000000E0678B50000ABFF0000A4FF00007BFF0000
-        54FF00004AFF070854FF070C69FF120E54EC5724220200000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000592420010C0581D80000B0FF0000A2FF0000
-        7DFF00005CFF000057FF000075FF000067FF3316366900000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000005121251206038AEC0000ADFF0000
-        A0FF000084FF000066FF000078FF00008CFF2A114B7600000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000000000000000000000000000000000004D202C1F030190EE0000
-        A7FF00009CFF00008CFF000076FF000096FF3515515A00000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000371653160703
-        8DE40000A4FF000099FF00009BFF0000ADFF3F1A462100000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000002610
-        7108030191C00000A3FF0000BFFF14088BC90000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000016087B6C0A057DDE4B1F302D0000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000
-      }
-      OnClick = SBokForzeArmateClick
-      ShowHint = True
-      ParentShowHint = False
-    end
+  object SpeedButton1: TSpeedButton
+    Left = 936
+    Height = 19
+    Top = 48
+    Width = 85
+    AutoSize = True
+    Caption = ' Pulisci  Campi '
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = SBclean
+    ParentFont = False
   end
   object PMfiltro: TPopupMenu
-    left = 912
-    top = 336
+    Left = 912
+    Top = 336
     object MenuItem1: TMenuItem
       Caption = '='
       OnClick = MenuItem1Click
@@ -1169,7 +1451,7 @@ object FmRicercaSuSchede: TFmRicercaSuSchede
   end
   object DS: TDataSource
     DataSet = DM.DSetTemp
-    left = 872
-    top = 336
+    Left = 872
+    Top = 336
   end
 end

@@ -6,6 +6,7 @@ object FmExportExcel: TFmExportExcel
   Caption = 'FmExportExcel'
   ClientHeight = 331
   ClientWidth = 678
+  Position = poMainFormCenter
   LCLVersion = '2.2.2.0'
   object Panel1: TPanel
     Left = 0
@@ -116,7 +117,7 @@ object FmExportExcel: TFmExportExcel
       'cont'
       'cognome'
       'nome'
-      'descrizione'
+      'cf'
       'nato'
       'comune'
       'pr'
@@ -141,14 +142,12 @@ object FmExportExcel: TFmExportExcel
       'sangue'
       'incarico'
       'dataposizione'
-      'cf'
-      'celservizio'
-      'telprivato'
+      'posizione'
     )
     TabOrder = 1
     Data = {
-      2100000002020202020202020202020202020202020202020202020202020202
-      0202020202
+      1F00000002020202020202020202020202020202020202020202020202020202
+      020202
     }
   end
   object Panel2: TPanel

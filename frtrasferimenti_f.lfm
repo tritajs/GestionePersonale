@@ -660,11 +660,6 @@ object FrTrasferimenti: TFrTrasferimenti
       ParentFont = False
       RowCount = 1
       TabOrder = 0
-      TitleFont.CharSet = ANSI_CHARSET
-      TitleFont.Height = -9
-      TitleFont.Name = 'Verdana'
-      TitleFont.Pitch = fpVariable
-      TitleFont.Quality = fqDraft
       OnEditingDone = SGtrasferimentiEditingDone
       OnPrepareCanvas = SGtrasferimentiPrepareCanvas
       OnSelectEditor = SGtrasferimentiSelectEditor
