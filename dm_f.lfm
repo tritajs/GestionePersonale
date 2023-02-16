@@ -107,4 +107,10 @@ object DM: TDM
     Left = 33
     Top = 232
   end
+  object DSetContributi: TUIBDataSet
+    Transaction = TR
+    Database = DB
+    Left = 312
+    Top = 216
+  end
 end

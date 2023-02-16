@@ -211,7 +211,7 @@ begin
 end;
 
 procedure Tmain.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-Var st:string;
+
 
  procedure termina;
    begin

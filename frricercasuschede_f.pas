@@ -145,6 +145,7 @@ Var st,filtro:string;
     DalOK,AlOK:Boolean;
     DataDal,DataAl:string;
 begin
+  Panel4.SetFocus;
   filtro:= '';
   st:= 'SELECT  d.grado,d.COGNOME,d.nome,d.REPARTO, r.RICOMPENSA,r.DETERMINA, r.DATARICOMPENSA, r.AUTORITA';
   st:= st + ' FROM VIEW_RICOMPENSE r inner join VIEW_DATIPERSONALI d on (r.KSMILITARE = d.IDMILITARE)';
@@ -163,23 +164,22 @@ begin
      filtro := filtro + ' r.dataricompensa = ' + DataDal + ' and ';
 
   if (DalOK and AlOK)  then
-     filtro := filtro + ' r.dataricompensa  between ' + DataAl + ' and ' + DataAl + ' and ';
+     filtro := filtro + ' r.dataricompensa  between ' + DataDal + ' and ' + DataAl + ' and ';
 
   if (ksreparto.ValueLookField ='') then
     begin
       if user.IdCompetenza <> '' then
-        begin
-         filtro := filtro + ' d.ksreparto in ''(' + USER.IdCompetenza + ') and ';
-        end;
+         filtro := filtro + ' d.ksreparto in (' + USER.IdCompetenza + ')'
+      else
+         filtro:= Copy(filtro,1,Length(filtro)-4);
     end
   else
-      filtro := filtro + ' d.ksreparto = ' + ksreparto.ValueLookField + ' and ';;
+      filtro := filtro + ' d.ksreparto = ' + ksreparto.ValueLookField;
 
   if filtro <> '' then
    begin
-  //  filtro:= Copy(filtro,1,Length(filtro)-4);
-    filtro:= ' Where ' + filtro + GrantFiltro;
-//    Memo1.Text:= st + FILTRO;
+    filtro:= ' Where ' + filtro;
+  //  Memo1.Text:= st + FILTRO;
     dm.DSetTemp.SQL.Text:= st + filtro;
     dm.DSetTemp.Active:=True;
    end;

@@ -34,8 +34,9 @@ type
     procedure SBSelectClick(Sender: TObject);
     procedure SBesportaClick(Sender: TObject);
   private
-    function AltreForzeArmate(matrmec:string;var periodo:YMD):boolean;
-    function PeriodiCongedo(matrmec:string;var periodo:YMD):boolean;
+    function  AltreForzeArmate(matrmec:string;var periodo:YMD):boolean;
+    function  PeriodiCongedo(matrmec:string;var periodo:YMD):boolean;
+    function  ContributiEsterni(idmilitare:string;var periodo:YMD):boolean;
     procedure OperazioniYMD(var periodo1:YMD; periodo2:YMD; operatore: operazioni );
 
     { private declarations }
@@ -135,6 +136,21 @@ begin
    end;
 end;
 
+function TFmExportExcel.ContributiEsterni(idmilitare: string; var periodo: YMD): boolean;
+var st:string;
+begin
+  Result:= false;
+  periodo.y:=0; periodo.m:= 0; periodo.d:= 0;
+  st:= 'SELECT DD, MM, YY, NOTE FROM CONTRIBUTIESTERNI  where ksmilitare  = ''' + idmilitare + '''';
+  if EseguiSQL(dm.QTemp1,st,Open,'errore') then
+    begin
+      Result:= True;
+      periodo.d :=  dm.QTemp1.Fields.ByNameAsSmallint['dd'];
+      periodo.m :=  dm.QTemp1.Fields.ByNameAsSmallint['mm'];
+      periodo.y :=  dm.QTemp1.Fields.ByNameAsSmallint['yy'];
+    end;
+end;
+
 
 procedure TFmExportExcel.OperazioniYMD(var periodo1: YMD; periodo2: YMD;
   operatore: operazioni);
@@ -206,6 +222,7 @@ Var st:string;
     CongedoYMD: YMD;
     GdFYMD: YMD;
     AltreForzeYMD: YMD;
+    ContributiYMD: YMD;
     TotaleYMD: YMD;
 
 const
@@ -217,7 +234,7 @@ const
 begin
 
   st:= '';
-  campi:= 'matrmec,grado,cognome,nome,reparto,nato as datanascita,arruolato as dataarruolamento';
+  campi:= 'matrmec,grado,cognome,nome,reparto,nato as datanascita,arruolato as dataarruolamento,idmilitare';
   filtro:= UpperCase(FmDatiPersonali.ECdati.filtro);
   where := Copy(filtro,pos('WHERE',filtro),Length(filtro));
   st := ' select ' + campi + ' from VIEW_DATIPERSONALI anagrafica ';
@@ -252,6 +269,7 @@ begin
       GdfYMD.y:=0; GdfYMD.m:=0; GdfYMD.d:=0;
       CongedoYMD.y:=0; CongedoYMD.m:=0; CongedoYMD.d:=0;
       AltreForzeYMD.y:=0;  AltreForzeYMD.m:=0; AltreForzeYMD.d:=0;
+      ContributiYMD.y:= 0; ContributiYMD.m:= 0; ContributiYMD.d:= 0;
       TotaleYMD.y:= 0; TotaleYMD.m:= 0; TotaleYMD.d:= 0;
 
       for col:= 0 to dm.DSetTemp.FieldCount - 1 do
@@ -282,7 +300,6 @@ begin
       PeriodBetween(dm.DSetTemp.Fields[6].AsDateTime,Today,GdFYMD.y, GdFYMD.m, GdFYMD.d);
 
 
-
       //detraggo  eventuali giorni di congedo
       if(CongedoYMD.y + CongedoYMD.m + CongedoYMD.d) > 0 then
         OperazioniYMD(GdFYMD,CongedoYMD,[SOTTRAZIONE]);
@@ -305,7 +322,13 @@ begin
 
 
       //totale contributi
-      MyWorksheet.WriteText(riga, 13,  IntToStr(TotaleYMD.y)+ ' anni '+IntToStr(TotaleYMD.m)+' mesi '+IntToStr(TotaleYMD.d)+' giorni');
+      if ContributiEsterni(dm.DSetTemp.FieldByName('idmilitare').AsString,ContributiYMD) then
+        begin
+           MyWorksheet.WriteText(riga, 12,  IntToStr(ContributiYMD.y)+ ' anni '+IntToStr(ContributiYMD.m)+' mesi '+IntToStr(ContributiYMD.d)+' giorni');
+           OperazioniYMD(TotaleYMD,ContributiYMD,[SOMMA]);
+        end;
+
+        MyWorksheet.WriteText(riga, 13,  IntToStr(TotaleYMD.y)+ ' anni '+IntToStr(TotaleYMD.m)+' mesi '+IntToStr(TotaleYMD.d)+' giorni');
 
       dm.DSetTemp.Next;
     end;

@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   StdCtrls, Buttons, Menus, ExtDlgs, ComCtrls, wteditcompNew, WTNavigator,
-  WTComboBoxSql, WTMemo, WTComboBox, WTCheckBox, WTimage, umEdit, WDateEdit, Types;
+  WTComboBoxSql, WTMemo, WTComboBox, WTCheckBox, WTimage, umEdit, WDateEdit;
 
 type
 
@@ -134,6 +134,7 @@ type
     SBfiltro: TSpeedButton;
     scadenzadc: TWDateEdit;
     Sesso: TumValidEdit;
+    TSContributi: TTabSheet;
     telprivato: TumEdit;
     TSAltreFFAA: TTabSheet;
     TSarma: TTabSheet;
@@ -208,7 +209,7 @@ uses DM_f, main_f, fraltreffaa_f, frarma_f, frcorsi_f, frfamiliari_f, frgradi_f,
   fricompense_f, fronorificenze_f, frpatenti_f, frspec_f, frstatogiuridico_f,
   frtessere_f, frtrasferimenti_f, frvalutazione_f, FrRicercaSuschede_f,
   FmModelliWord_f, fmcomunicazioni_f, fmexportexcel_f, fminsmulval_f,
-  FmStampe_f, fmmodspec_f,  LSystemTrita, db;
+  FmStampe_f, fmmodspec_f,  LSystemTrita, db, frcontributi_f;
 
 Var FrGradi :         TFrGradi;
     FrTrasferimenti:  TFrTrasferimenti;
@@ -223,6 +224,7 @@ Var FrGradi :         TFrGradi;
     FrCorsi:          TFrCorsi;
     FrRicompense:     TFrRicompense;
     FrOnorificenze:   TFrOnorificenze;
+    FrContributi:     TFrContributi;
 
 {$R *.lfm}
 
@@ -526,12 +528,27 @@ begin
          FrOnorificenze:= TFrOnorificenze.Create(TSOnorificenze);
          FrOnorificenze.Parent := TSOnorificenze;
        end;
-     Grant:= CheckGrantTab('ONORIFICENZE         ');
+     Grant:= CheckGrantTab('ONORIFICENZE');
      if Grant > 0 then
        FrOnorificenze.Esegui(Grant)
      else
        PC.ActivePage:= nil;
-   end;
+   end
+   //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+   else if PC.ActivePage = TSContributi then   //Contributi Esterni
+    begin
+      if  not Assigned(FrContributi) then
+        begin
+          FrContributi:= TFrContributi.Create(TSContributi);
+          FrContributi.Parent := TSContributi;
+        end;
+      Grant:= CheckGrantTab('CONTRIBUTI ESTERNI');
+      if Grant > 0 then
+        FrContributi.Esegui(Grant)
+      else
+        PC.ActivePage:= nil;
+    end;
+
  end;
 end;
 
@@ -617,6 +634,7 @@ begin
       TSCorsi.ImageIndex:=            dm.QTemp.Fields.ByNameAsInteger['corsi'];
       TSRicompense.ImageIndex:=       dm.QTemp.Fields.ByNameAsInteger['ricompense'];
       TSOnorificenze.ImageIndex:=     dm.QTemp.Fields.ByNameAsInteger['onorificenze'];
+      TSContributi.ImageIndex:=       dm.QTemp.Fields.ByNameAsInteger['contributiesterni'];
     end;
 end;
 
@@ -839,7 +857,7 @@ procedure TFmDatiPersonali.ECdatiBeforeFind(Sender: Tobject; var CampiValori,
   CampiWhere, CampiJoin: string; var CheckFiltro: Boolean; var Indice: string;
   var SelectCustomer: string; var EndOr: string);
 begin
-  SelectCustomer:= 'SELECT * FROM VIEW_DATIPERSONALI ANAGRAFICA';
+ SelectCustomer:= 'SELECT * FROM VIEW_DATIPERSONALI ANAGRAFICA';
  if  presente.Checked then
     CampiWhere:= GrantPr.FiltroPresenti
   else

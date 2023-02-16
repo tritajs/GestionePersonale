@@ -271,9 +271,9 @@ object FmRicercaSuSchede: TFmRicercaSuSchede
     Height = 265
     Top = 44
     Width = 1115
-    ActivePage = TSArma
+    ActivePage = TSricompense
     Align = alClient
-    TabIndex = 0
+    TabIndex = 5
     TabOrder = 2
     OnChange = PCChange
     object TSArma: TTabSheet
@@ -361,6 +361,8 @@ object FmRicercaSuSchede: TFmRicercaSuSchede
             'P.A.B. MOD. 84BB CAL. 9 CORTO '
             'P.A.B. MOD. 92FS CAL. 9 PARABELLUM'
             'PX4 STORM FULL SIZE CAL. 9X19 MM '
+            ''
+            ''
             ''
             ''
             ''

@@ -17,6 +17,7 @@ type
     DSetArchivi: TUIBDataSet;
     DB: TUIBDataBase;
     DSetParenti: TUIBDataSet;
+    DSetContributi: TUIBDataSet;
     QTabelle: TUIBQuery;
     QTemp1: TUIBQuery;
     TR: TUIBTransaction;

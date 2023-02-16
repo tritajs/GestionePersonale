@@ -1,18 +1,18 @@
 object FmAutorizzazioni: TFmAutorizzazioni
   Left = 423
-  Height = 592
+  Height = 611
   Top = 301
   Width = 1237
   Caption = 'Autorizzazioni'
-  ClientHeight = 592
+  ClientHeight = 611
   ClientWidth = 1237
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.2.2.0'
   object Panel1: TPanel
     Left = 0
     Height = 42
-    Top = 550
+    Top = 569
     Width = 1237
     Align = alBottom
     BevelInner = bvLowered
@@ -558,7 +558,7 @@ object FmAutorizzazioni: TFmAutorizzazioni
   end
   object Panel3: TPanel
     Left = 0
-    Height = 505
+    Height = 524
     Top = 45
     Width = 610
     Align = alLeft
@@ -566,7 +566,7 @@ object FmAutorizzazioni: TFmAutorizzazioni
     BevelOuter = bvLowered
     BorderStyle = bsSingle
     Caption = 'Panel3'
-    ClientHeight = 501
+    ClientHeight = 520
     ClientWidth = 606
     TabOrder = 2
     object Label1: TLabel
@@ -589,7 +589,7 @@ object FmAutorizzazioni: TFmAutorizzazioni
     end
     object SGabilitati: TwtStringGridSql
       Left = 2
-      Height = 481
+      Height = 500
       Top = 18
       Width = 602
       Align = alClient
@@ -657,7 +657,7 @@ object FmAutorizzazioni: TFmAutorizzazioni
   end
   object PairSplitter1: TPairSplitter
     Left = 610
-    Height = 505
+    Height = 524
     Top = 45
     Width = 9
     Align = alLeft
@@ -665,35 +665,35 @@ object FmAutorizzazioni: TFmAutorizzazioni
     object PairSplitterSide2: TPairSplitterSide
       Cursor = crArrow
       Left = 5
-      Height = 505
+      Height = 524
       Top = 0
       Width = 0
     end
     object PairSplitterSide1: TPairSplitterSide
       Cursor = crArrow
       Left = 5
-      Height = 505
+      Height = 524
       Top = 0
       Width = 4
     end
   end
   object Panel5: TPanel
     Left = 616
-    Height = 377
+    Height = 396
     Top = 169
     Width = 616
     Anchors = [akTop, akRight, akBottom]
     BevelInner = bvLowered
     BevelOuter = bvLowered
     BorderStyle = bsSingle
-    ClientHeight = 373
+    ClientHeight = 392
     ClientWidth = 612
     Color = clWhite
     ParentColor = False
     TabOrder = 5
     object CGtabelle: TCheckGroup
       Left = 2
-      Height = 369
+      Height = 388
       Top = 2
       Width = 608
       Align = alClient
@@ -707,7 +707,7 @@ object FmAutorizzazioni: TFmAutorizzazioni
       ChildSizing.ShrinkVertical = crsScaleChilds
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 2
-      ClientHeight = 349
+      ClientHeight = 368
       ClientWidth = 604
       Color = clWhite
       Columns = 2
@@ -738,12 +738,14 @@ object FmAutorizzazioni: TFmAutorizzazioni
         'RICOMPENSE MODIFICA'
         'ONORIFICENZE LETTURA'
         'ONORIFICIENZE MODIFICA'
+        'CONTRIBUTI ESTERNI LETTURA'
+        'CONTRIBUTI ESTERNI MODIFICA'
       )
       ParentColor = False
       TabOrder = 0
       Visible = False
       Data = {
-        1A0000000202020202020202020202020202020202020202020202020202
+        1C00000002020202020202020202020202020202020202020202020202020202
       }
     end
   end

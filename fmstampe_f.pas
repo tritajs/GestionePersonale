@@ -282,6 +282,7 @@ var   st,ReadFile:string;
   function RicercaParenti(st:string):string; //ricerca la parentela
    begin
      result:= '';
+     riga:= 0;
      dm.DSetParenti.First;
        while not dm.DSetParenti.EOF DO
          begin

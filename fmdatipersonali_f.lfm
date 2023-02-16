@@ -2,10 +2,10 @@ object FmDatiPersonali: TFmDatiPersonali
   Left = 375
   Height = 664
   Top = 218
-  Width = 1150
+  Width = 1223
   Caption = 'FmDatiPersonali'
   ClientHeight = 644
-  ClientWidth = 1150
+  ClientWidth = 1223
   KeyPreview = True
   Menu = MainMenu
   OnClose = FormClose
@@ -17,13 +17,13 @@ object FmDatiPersonali: TFmDatiPersonali
     Left = 0
     Height = 357
     Top = 11
-    Width = 1150
+    Width = 1223
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvLowered
     BorderStyle = bsSingle
     ClientHeight = 353
-    ClientWidth = 1146
+    ClientWidth = 1219
     Color = 14543103
     ParentColor = False
     TabOrder = 0
@@ -1134,6 +1134,9 @@ object FmDatiPersonali: TFmDatiPersonali
         ''
         ''
         ''
+        ''
+        ''
+        ''
       )
       ParentFont = False
       ReadOnly = True
@@ -1425,11 +1428,11 @@ object FmDatiPersonali: TFmDatiPersonali
     Left = 0
     Height = 208
     Top = 400
-    Width = 1150
-    ActivePage = TSOnorificenze
+    Width = 1223
+    ActivePage = TSContributi
     Align = alClient
     Images = main.ImageList3
-    TabIndex = 12
+    TabIndex = 13
     TabOrder = 1
     OnChange = PCChange
     object TSgradi: TTabSheet
@@ -1477,26 +1480,29 @@ object FmDatiPersonali: TFmDatiPersonali
     object TSOnorificenze: TTabSheet
       Caption = 'Onorificenze'
     end
+    object TSContributi: TTabSheet
+      Caption = 'Contributi'
+    end
   end
   object Panel3: TPanel
     Left = 0
     Height = 36
     Top = 608
-    Width = 1150
+    Width = 1223
     Align = alBottom
     BevelInner = bvRaised
     BorderWidth = 1
     BorderStyle = bsSingle
     Caption = 'Panel3'
     ClientHeight = 32
-    ClientWidth = 1146
+    ClientWidth = 1219
     TabOrder = 2
     object Image2: TImage
       Cursor = crHandPoint
       Left = 3
       Height = 26
       Top = 3
-      Width = 1140
+      Width = 1213
       AntialiasingMode = amOn
       Align = alClient
       Center = True
@@ -1558,18 +1564,18 @@ object FmDatiPersonali: TFmDatiPersonali
     Left = 0
     Height = 32
     Top = 368
-    Width = 1150
+    Width = 1223
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvLowered
     ClientHeight = 32
-    ClientWidth = 1150
+    ClientWidth = 1223
     TabOrder = 3
     object Image1: TImage
       Left = 2
       Height = 28
       Top = 2
-      Width = 1146
+      Width = 1219
       Align = alClient
       Picture.Data = {
         0954474946496D616765FB00000047494638396110001B00C40000E6F0DA94B2
@@ -1588,7 +1594,7 @@ object FmDatiPersonali: TFmDatiPersonali
       Left = 2
       Height = 28
       Top = 2
-      Width = 1146
+      Width = 1219
       Align = alClient
       Alignment = taCenter
       Caption = 'Scheda Personale'
@@ -1654,17 +1660,17 @@ object FmDatiPersonali: TFmDatiPersonali
     Left = 0
     Height = 11
     Top = 0
-    Width = 1150
+    Width = 1223
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 11
-    ClientWidth = 1150
+    ClientWidth = 1223
     TabOrder = 4
     object Image3: TImage
       Left = 0
       Height = 11
       Top = 0
-      Width = 1150
+      Width = 1223
       Align = alClient
       Picture.Data = {
         0A544A706567496D616765E2020000FFD8FFE000104A46494600010101006000

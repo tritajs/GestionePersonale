@@ -121,7 +121,7 @@
         <PackageName Value="LCL"/>
       </Item8>
     </RequiredPackages>
-    <Units Count="28">
+    <Units Count="29">
       <Unit0>
         <Filename Value="GestionePersonale.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -315,6 +315,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit27>
+      <Unit28>
+        <Filename Value="frcontributi_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrContributi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit28>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

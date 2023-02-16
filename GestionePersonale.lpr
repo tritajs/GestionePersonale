@@ -10,7 +10,7 @@ uses
   Forms, laz_fpspreadsheet, uiblaz, main_f, DM_f, fmautorizzazioni_f,
   fmdatipersonali_f, FrRicercaSuschede_f, FmModelliWord_f, fmcomunicazioni_f,
   fmexportexcel_f, fminsmulval_f, FmStampe_f, lazreportpdfexport, fminscorsi_f,
-  fmsituazioneforza_f, fmcambiautente_f, fmmodspec_f, fmnote_f;
+  fmsituazioneforza_f, fmcambiautente_f, fmmodspec_f, fmnote_f, frcontributi_f;
 
 {$R *.res}
 
